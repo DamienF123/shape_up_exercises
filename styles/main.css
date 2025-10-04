@@ -34,7 +34,7 @@ header img {
 section a:link,
 section a:visited {
     color: maroon;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 section a:hover,
@@ -45,7 +45,6 @@ section a:focus {
 /* Aside header color */
 aside h3 {
     color: maroon;
-    text-decoration: underline;
 }
 
 /* Aside list styling */
@@ -63,7 +62,6 @@ aside a:visited {
 aside a:hover,
 aside a:focus {
     color: maroon;
-    text-decoration: underline;
 }
 
 /* Footer styling */
