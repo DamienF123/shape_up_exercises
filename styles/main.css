@@ -19,3 +19,25 @@ header h1 {
     font-style: italic;
     font-size: 3em;
 }
+
+header h2 {
+    font-size: 1.5em;
+}
+
+/* Float the logo image and add spacing */
+header img {
+    float: left;
+    margin-right: 20px;
+}
+
+/* section link styling */
+section a:link,
+section a:visited {
+    color: maroon;
+    text-decoration: none;
+}
+
+section a:hover,
+section a:focus {
+    color: steelblue;
+}
