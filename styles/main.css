@@ -56,7 +56,7 @@ aside ul {
 aside a:link,
 aside a:visited {
     color: steelblue;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 aside a:hover,
