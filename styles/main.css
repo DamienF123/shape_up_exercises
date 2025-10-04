@@ -62,6 +62,7 @@ aside a:visited {
 aside a:hover,
 aside a:focus {
     color: maroon;
+    text-decoration: underline;
 }
 
 /* Footer styling */
