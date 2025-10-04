@@ -1,0 +1,21 @@
+/* Set default font */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Make all the links bold */
+a {
+    font-weight: bold;
+}
+
+/* Style for all h1 elements */
+h1 {
+    font-size: 2.5em; /* Adjust this value as needed */
+}
+
+/* Header styles */
+header h1 {
+    color: steelblue;
+    font-style: italic;
+    font-size: 3em;
+}
