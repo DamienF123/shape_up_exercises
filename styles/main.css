@@ -1,71 +1,40 @@
-/* Set default font */
+/* Reset Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Container Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* Make all the links bold */
-a {
-    font-weight: bold;
+main {
+    width: 700px;
+    border: 4px solid steelblue;
+    box-shadow: 0 0 15px black;
+    background-color: white;
+    padding: 20px;
 }
 
-/* Style for all h1 elements */
-h1 {
-    font-size: 2.5em; /* Adjust this value as needed */
-}
-
-/* Header styles */
-header h1 {
-    color: steelblue;
-    font-style: italic;
-    font-size: 3em;
-}
-
-header h2 {
-    font-size: 1.5em;
-}
-
-/* Float the logo image and add spacing */
-header img {
-    float: left;
-    margin-right: 20px;
-}
-
-/* section link styling */
-section a:link,
-section a:visited {
-    color: maroon;
-    text-decoration: underline;
-}
-
-section a:hover,
-section a:focus {
-    color: steelblue;
-}
-
-/* Aside header color */
-aside h3 {
-    color: maroon;
-}
-
-/* Aside list styling */
-aside ul {
-    line-height: 1.5;
-}
-
-/* Aside link styling */
-aside a:link,
-aside a:visited {
-    color: steelblue;
-    text-decoration: underline;
-}
-
-aside a:hover,
-aside a:focus {
-    color: maroon;
-}
-
-/* Footer styling */
-footer {
+/* Header Styling with Gradient */
+header {
+    background: linear-gradient(to bottom, white, lightsteelblue);
     text-align: center;
-    font-size: 0.8em;
+    padding: 20px;
+    border-bottom: 4px solid steelblue;
+}
+
+/* Footer Styling */
+footer {
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
