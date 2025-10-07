@@ -1,43 +1,35 @@
-/* CSS Reset */
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-/* Body layout */
+/* Set default font and body layout */
 body {
    font-family: Arial, Helvetica, sans-serif;
-   width: 720px;
+   width: 700px;
    margin: 20px auto; /* Center the page */
-   border: 2px solid steelblue; /* Steelblue border */
-   box-shadow: 5px 5px 10px black; /* Black shadow */
+   border: 2px solid steelblue;
+   box-shadow: 5px 5px 10px black;
    background-color: white;
    padding: 20px;
 }
 
 
-/* Link styling */
+/* Make all the links bold */
 a {
    font-weight: bold;
 }
 
 
-/* h1 elements */
+/* Style for all h1 elements */
 h1 {
-   font-size: 2.5em;
-   margin-bottom: 10px;
+   font-size: 2.5em; /* Adjust this value as needed */
 }
 
 
-/* Header styling */
-header h1 {
-   background: linear-gradiant(white, lightsteelblue); /* Gradient */
+/* Header styles */
+header {
+   background: linear-gradient(white, lightsteelblue);
    padding: 20px;
    overflow: auto; /* Clear floats */
-   border-bottom: 4px solid steelblue; /* Steelblue bottom border */
-   margin-bottom: 20px;
+   border-bottom: 4px solid steelblue;
 }
+
 
 header h1 {
    color: steelblue;
@@ -48,16 +40,17 @@ header h1 {
 
 header h2 {
    font-size: 1.5em;
-   margin-top: 10px;
 }
 
+
+/* Float the logo image and add spacing */
 header img {
    float: left;
    margin-right: 20px;
 }
 
 
-/* section links */
+/* Section link styling */
 section a:link,
 section a:visited {
    color: maroon;
@@ -70,45 +63,35 @@ section a:focus {
    color: steelblue;
 }
 
-/* Aside section */
-aside {
-   border: 2px solid steelblue;
-   border-radius: 10px;
-   padding: 15px;
-   margin-top: 20px;
-   background-color: #f9f9f9;
-}
 
+/* Aside header color */
 aside h3 {
    color: maroon;
-   margin-bottom: 10px;
 }
 
+
+/* Aside list styling */
 aside ul {
    line-height: 1.5;
-   list-style-type: disc;
-   padding-left: 20px;
 }
 
 
+/* Aside link styling */
 aside a:link,
 aside a:visited {
    color: steelblue;
    text-decoration: underline;
 }
 
+
 aside a:hover,
 aside a:focus {
    color: maroon;
 }
 
+
 /* Footer styling */
 footer {
    text-align: center;
    font-size: 0.8em;
-   background-color: steelblue;
-   color: white;
-   padding: 10px;
-   margin-top: 20px;
-   border-top: 2px solid #333;
 }
