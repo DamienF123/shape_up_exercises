@@ -1,91 +1,84 @@
 /* Set default font */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* * NEW STYLES:
- * Format the body of the page so it’s 700px wide, has a steelblue border 
- * with a black shadow, and is centered in the browser window.
- */
-body {
-    width: 700px; /* Set the width */
-    border: 1px solid steelblue; /* Add a steelblue border */
-    box-shadow: 5px 5px 10px black; /* Add a black shadow (adjust values for desired effect) */
-    margin: 0 auto; /* Center the body horizontally */
-}
 
 /* Make all the links bold */
 a {
-    font-weight: bold;
+   font-weight: bold;
 }
+
 
 /* Style for all h1 elements */
 h1 {
-    font-size: 2.5em; /* Adjust this value as needed */
+   font-size: 2.5em; /* Adjust this value as needed */
 }
+
 
 /* Header styles */
-header {
-    /* NEW STYLES: Add a color gradient to the header (white at the top to lightsteelblue at the bottom). */
-    background: linear-gradient(white, lightsteelblue);
-    /* NEW STYLES: Add a steelblue border below the header */
-    border-bottom: 2px solid steelblue; 
-    padding: 10px; /* Added padding for better visual spacing within the header */
-    overflow: auto; /* Clears the float of the logo image */
+header h1 {
+   color: steelblue;
+   font-style: italic;
+   font-size: 3em;
 }
 
-header h1 {
-    color: steelblue;
-    font-style: italic;
-    font-size: 3em;
-}
 
 header h2 {
-    font-size: 1.5em;
+   font-size: 1.5em;
 }
+
 
 /* Float the logo image and add spacing */
 header img {
-    float: left;
-    margin-right: 20px;
+   float: left;
+   margin-right: 20px;
 }
+
 
 /* section link styling */
 section a:link,
 section a:visited {
-    color: maroon;
-    text-decoration: underline;
+   color: maroon;
+   text-decoration: underline;
 }
+
 
 section a:hover,
 section a:focus {
-    color: steelblue;
+   color: steelblue;
 }
+
 
 /* Aside header color */
 aside h3 {
-    color: maroon;
+   color: maroon;
 }
+
 
 /* Aside list styling */
 aside ul {
-    line-height: 1.5;
+   line-height: 1.5;
 }
+
 
 /* Aside link styling */
 aside a:link,
 aside a:visited {
-    color: steelblue;
-    text-decoration: underline;
+   color: steelblue;
+   text-decoration: underline;
 }
+
 
 aside a:hover,
 aside a:focus {
-    color: maroon;
+   color: maroon;
 }
+
 
 /* Footer styling */
 footer {
-    text-align: center;
-    font-size: 0.8em;
+   text-align: center;
+   font-size: 0.8em;
 }
+
