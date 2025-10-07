@@ -3,6 +3,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* * NEW STYLES:
+ * Format the body of the page so it’s 700px wide, has a steelblue border 
+ * with a black shadow, and is centered in the browser window.
+ */
+body {
+    width: 700px; /* Set the width */
+    border: 1px solid steelblue; /* Add a steelblue border */
+    box-shadow: 5px 5px 10px black; /* Add a black shadow (adjust values for desired effect) */
+    margin: 0 auto; /* Center the body horizontally */
+}
+
 /* Make all the links bold */
 a {
     font-weight: bold;
@@ -14,6 +25,15 @@ h1 {
 }
 
 /* Header styles */
+header {
+    /* NEW STYLES: Add a color gradient to the header (white at the top to lightsteelblue at the bottom). */
+    background: linear-gradient(white, lightsteelblue);
+    /* NEW STYLES: Add a steelblue border below the header */
+    border-bottom: 2px solid steelblue; 
+    padding: 10px; /* Added padding for better visual spacing within the header */
+    overflow: auto; /* Clears the float of the logo image */
+}
+
 header h1 {
     color: steelblue;
     font-style: italic;
