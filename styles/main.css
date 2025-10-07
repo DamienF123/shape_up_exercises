@@ -33,7 +33,7 @@ header img {
 /* section link styling */
 section a:link,
 section a:visited {
-    color: steelblue;
+    color: maroon;
     text-decoration: underline;
 }
 
@@ -44,7 +44,7 @@ section a:focus {
 
 /* Aside header color */
 aside h3 {
-    color: steelblue;
+    color: maroon;
 }
 
 /* Aside list styling */
@@ -61,7 +61,7 @@ aside a:visited {
 
 aside a:hover,
 aside a:focus {
-    color: steelblue;
+    color: maroon;
 }
 
 /* Footer styling */
