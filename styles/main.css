@@ -1,72 +1,77 @@
-/* Set default font */
+/* ==== CSS RESET ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==== GENERAL STYLES ==== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
 }
 
-/* Make all the links bold */
-a {
-    font-weight: bold;
+/* ==== HEADER ==== */
+header {
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-/* Style for all h1 elements */
-h1 {
-    font-size: 2.5em; /* Adjust this value as needed */
-}
-
-/* Header styles */
-header h1 {
-    color: steelblue;
-    font-style: italic;
-    font-size: 3em;
-}
-
-header h2 {
-    font-size: 1.5em;
-}
-
-/* Float the logo image and add spacing */
 header img {
-    float: left;
-    margin-right: 20px;
+    max-width: 150px;
+    height: auto;
 }
 
-/* section link styling */
-section a:link,
-section a:visited {
-    color: maroon;
+/* ==== MAIN CONTENT ==== */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* SECTION (Main Content) */
+main section {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* ASIDE (Sidebar) */
+aside  {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px;
+    border: 2px solid steelblue;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* ==== LINKS ==== */
+a {
+    color: steelblue;
     text-decoration: none;
 }
 
-section a:hover,
-section a:focus {
-    color: steelblue;
-}
-
-/* Aside header color */
-aside h3 {
-    color: maroon;
-}
-
-/* Aside list styling */
-aside ul {
-    line-height: 1.5;
-}
-
-/* Aside link styling */
-aside a:link,
-aside a:visited {
-    color: steelblue;
-    text-decoration: none;
-}
-
-aside a:hover,
-aside a:focus {
-    color: maroon;
+a:hover {
     text-decoration: underline;
 }
 
-/* Footer styling */
-footer {
-    text-align: center;
-    font-size: 0.8em;
+/* Optional: Adjust headings and paragraph spacing */
+h1, h2, h3, h4 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
 }
