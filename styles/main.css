@@ -63,20 +63,25 @@ section a:focus {
    color: steelblue;
 }
 
+/* Aside styles */
+aside {
+   border: 2px solid steelblue;
+   border-radius: 10px;
+   padding: 15px;
+   margin-top: 20px;
+}
 
-/* Aside header color */
+
 aside h3 {
    color: maroon;
 }
 
 
-/* Aside list styling */
 aside ul {
    line-height: 1.5;
 }
 
 
-/* Aside link styling */
 aside a:link,
 aside a:visited {
    color: steelblue;
@@ -94,4 +99,7 @@ aside a:focus {
 footer {
    text-align: center;
    font-size: 0.8em;
+   background-color: steelblue;
+   color: white;
+   padding: 10px;
 }
