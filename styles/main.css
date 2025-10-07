@@ -5,36 +5,37 @@
    box-sizing: border-box;
 }
 
-/* Set default font and body layout */
+/* Body layout */
 body {
    font-family: Arial, Helvetica, sans-serif;
    width: 720px;
    margin: 20px auto; /* Center the page */
-   border: 2px solid steelblue;
-   box-shadow: 5px 5px 10px black;
+   border: 2px solid steelblue; /* Steelblue border */
+   box-shadow: 5px 5px 10px black; /* Black shadow */
    background-color: white;
    padding: 20px;
 }
 
 
-/* Make all the links bold */
+/* Link styling */
 a {
    font-weight: bold;
 }
 
 
-/* Style for all h1 elements */
+/* h1 elements */
 h1 {
-   font-size: 2.5em; /* Adjust this value as needed */
+   font-size: 2.5em;
+   margin-bottom: 10px;
 }
 
 
-/* Header styles */
+/* Header styling */
 header h1 {
-   background: linear-gradiant(white, lightsteelblue);
+   background: linear-gradiant(white, lightsteelblue); /* Gradient */
    padding: 20px;
    overflow: auto; /* Clear floats */
-   border-bottom: 4px solid steelblue;
+   border-bottom: 4px solid steelblue; /* Steelblue bottom border */
    margin-bottom: 20px;
 }
 
@@ -56,7 +57,7 @@ header img {
 }
 
 
-/* section link styling */
+/* section links */
 section a:link,
 section a:visited {
    color: maroon;
@@ -69,10 +70,10 @@ section a:focus {
    color: steelblue;
 }
 
-/* Aside styles */
+/* Aside section */
 aside {
    border: 2px solid steelblue;
-   border: 10px;
+   border-radius: 10px;
    padding: 15px;
    margin-top: 20px;
    background-color: #f9f9f9;
