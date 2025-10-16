@@ -1,152 +1,138 @@
-/* Base font size for responsiveness */
+/* Basic reset and responsive base */
 html {
-   font-size: 1.1vw;
+  font-size: 1.1vw;
 }
 
-/* Body layout and styling */
 body {
-   font-family: Arial, Helvetica, sans-serif;
-   max-width: 1000px;
-   width: 90%;
-   margin: 20px auto;
-   border: 2px solid steelblue;
-   box-shadow: 5px 5px 10px black;
-   background-color: white;
-   padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid steelblue;
+  box-shadow: 5px 5px 10px black;
+  background-color: white;
 }
 
-/* Link styling */
-a {
-   font-weight: bold;
-}
-
-/* Main heading */
-h1 {
-   font-size: 2.5em;
-}
-
-/* Header area */
+/* Header layout */
 header {
-   background: linear-gradient(white, lightsteelblue);
-   padding: 20px;
-   overflow: auto;
-   border-bottom: 4px solid steelblue;
-   display: flex;
-   align-items: center;
+  background: linear-gradient(white, lightsteelblue);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid steelblue;
 }
 
-/* Header logo */
 header img {
-   flex-shrink: 0;
-   width: 100%;
-   max-width: 120px;
-   min-width: 100px;
-   height: auto;
-   margin-right: 20px;
+  max-width: 120px;
+  min-width: 100px;
+  width: 100%;
+  height: auto;
+  margin-right: 20px;
 }
 
-/* Header text */
 header h1 {
-   color: steelblue;
-   font-style: italic;
-   font-size: 3em;
-   margin: 0;
+  font-size: 3em;
+  color: steelblue;
+  font-style: italic;
+  margin: 0;
 }
 
 header h2 {
-   font-size: 1.5em;
-   margin: 0;
+  font-size: 1.5em;
+  margin: 0;
 }
 
-/* Flexbox two-column layout */
-.content {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: flex-start;
-   flex-wrap: nowrap;
-   gap: 20px;
+/* TWO COLUMN LAYOUT */
+.two-column {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-/* Left main section */
-section {
-   flex: 2 1 65%;
-   padding: 10px;
+/* LEFT COLUMN: main content */
+.left-column {
+  flex: 2;
+  min-width: 0;
 }
 
-/* Right aside column */
+/* RIGHT COLUMN: aside */
 aside {
-   flex: 1 1 30%;
-   border: 2px solid steelblue;
-   border-radius: 10px;
-   padding: 15px;
-   background-color: #f9f9f9;
-   height: fit-content;
-   min-width: 200px;
+  flex: 1;
+  min-width: 200px;
+  border: 2px solid steelblue;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  height: fit-content;
 }
 
-
-/* Aside heading */
+/* Sidebar heading */
 aside h3 {
-   color: maroon;
-   margin-top: 0;
+  color: maroon;
+  margin-top: 0;
 }
 
-
-/* List inside aside */
+/* Sidebar links */
 aside ul {
-   line-height: 1.5;
-   list-style-position: inside;
-   padding: 0;
-   margin: 0;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
 }
 
-/* Section link styling */
-section a:link,
-section a:visited {
-   color:maroon;
-   text-decoration: underline;
-}
-
-section a:hover,
-section a:focus {
-   color: steelblue;
-}
-
-/* Aside link styling */
-section a:link,
-section a:visited {
-   color: steelblue;
-   text-decoration: underline;
+aside a:link,
+aside a:visited {
+  color: steelblue;
+  text-decoration: underline;
 }
 
 aside a:hover,
 aside a:focus {
-   color: maroon;
+  color: maroon;
+}
+
+/* Section link styling */
+.left-column a:link,
+.left-column a:visited {
+  color: maroon;
+  text-decoration: underline;
+}
+
+.left-column a:hover,
+.left-column a:focus {
+  color: steelblue;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.8em;
 }
 
 /* Footer */
 footer {
-   text-align: center;
-   font-size: 0.8em;
-   background-color: steelblue;
-   color: white;
-   padding: 10px;
-   margin-top: 20px;
+  text-align: center;
+  font-size: 0.8em;
+  background-color: steelblue;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
 }
 
-/* Responsive layout: stack on small screens */
+/* Responsive layout for small screens */
 @media (max-width: 768px) {
-   .content {
-      flex-direction: column;
-   }
+  .two-column {
+    flex-direction: column;
+  }
 
-   section,
-   aside {
-      flex: 1 1 100%;
-   }
+  html {
+    font-size: 16px;
+  }
 
-   html {
-      font-size: 16px;
-   }
+  aside {
+    margin-top: 20px;
+  }
 }
