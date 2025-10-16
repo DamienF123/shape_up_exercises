@@ -54,20 +54,20 @@ header h2 {
    margin: 0;
 }
 
-/*Flexbox layout for main content */
+/* Flexbox layout for main content */
 main {
    display: flex;
    flex-wrap: wrap;
    gap: 20px;
 }
 
-/* Main content on the left */
+/* Section content styles */
 section {
    flex: 2 1 60%;
    padding: 10px;
 }
 
-/* Sidebar on the right */
+/* Aside styles */
 aside {
    flex: 1 1 30%;
    border: 2px solid steelblue;
@@ -75,24 +75,18 @@ aside {
    padding: 15px;
 }
 
-/* Two-column list inside the sidebar */
-aside ul {
-   line-height: 1.5;
-   columns: 2;
-   column-gap: 20px;
-   list-style-position: inside;
-   padding: 0;
-   margin: 0;
-}
-
 aside h3 {
    color: maroon;
+}
+
+aside ul {
+   line-height: 1.5;
 }
 
 /* Section link styling */
 section a:link,
 section a:visited {
-   color:maroon;
+   color: maroon;
    text-decoration: underline;
 }
 
@@ -121,15 +115,4 @@ footer {
    color: white;
    padding: 10px;
    margin-top: 20px;
-}
-
-/* Responsive: collapse aside columns on small screens */
-@media (max-width: 600px) {
-   main {
-      flex-direction: column;
-   }
-
-   aside ul {
-      columns: 1; /* Stack list items on small screens */
-   }
 }
