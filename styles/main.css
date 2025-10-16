@@ -1,19 +1,21 @@
-/* Basic reset and responsive base */
-html {
-  font-size: 1.1vw;
-}
-
+/* Base layout */
 body {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 1000px;
+  width: 90%;
   margin: 20px auto;
   padding: 20px;
+  background: white;
   border: 2px solid steelblue;
   box-shadow: 5px 5px 10px black;
-  background-color: white;
 }
 
-/* Header layout */
+/* Make all links bold */
+a {
+  font-weight: bold;
+}
+
+/* Header */
 header {
   background: linear-gradient(white, lightsteelblue);
   padding: 20px;
@@ -23,9 +25,9 @@ header {
 }
 
 header img {
+  width: 100%;
   max-width: 120px;
   min-width: 100px;
-  width: 100%;
   height: auto;
   margin-right: 20px;
 }
@@ -42,74 +44,57 @@ header h2 {
   margin: 0;
 }
 
-/* TWO COLUMN LAYOUT */
+/* FLEX layout for main area */
 .two-column {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 20px;
 }
 
-/* LEFT COLUMN: main content */
-.left-column {
+/* LEFT COLUMN */
+section {
   flex: 2;
-  min-width: 0;
 }
 
-/* RIGHT COLUMN: aside */
+/* RIGHT COLUMN */
 aside {
   flex: 1;
-  min-width: 200px;
   border: 2px solid steelblue;
   border-radius: 10px;
   padding: 15px;
   background-color: #f9f9f9;
-  height: fit-content;
 }
 
-/* Sidebar heading */
 aside h3 {
   color: maroon;
-  margin-top: 0;
 }
 
-/* Sidebar links */
 aside ul {
-  line-height: 1.5;
-  padding: 0;
-  margin: 0;
-  list-style-position: inside;
+  list-style: inside;
+  line-height: 1.6;
+  padding-left: 0;
 }
 
-aside a:link,
-aside a:visited {
+aside a {
   color: steelblue;
   text-decoration: underline;
 }
 
-aside a:hover,
-aside a:focus {
+aside a:hover {
   color: maroon;
 }
 
-/* Section link styling */
-.left-column a:link,
-.left-column a:visited {
-  color: maroon;
-  text-decoration: underline;
-}
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
 
-.left-column a:hover,
-.left-column a:focus {
-  color: steelblue;
-}
-
-/* Headings */
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 1.8em;
+  section,
+  aside {
+    flex: 1 1 100%;
+  }
 }
 
 /* Footer */
@@ -120,19 +105,4 @@ footer {
   color: white;
   padding: 10px;
   margin-top: 20px;
-}
-
-/* Responsive layout for small screens */
-@media (max-width: 768px) {
-  .two-column {
-    flex-direction: column;
-  }
-
-  html {
-    font-size: 16px;
-  }
-
-  aside {
-    margin-top: 20px;
-  }
 }
