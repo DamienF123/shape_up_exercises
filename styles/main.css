@@ -55,19 +55,22 @@ header h2 {
    margin: 0;
 }
 
-/* Two-column layout */
-main {
+/* Two-column layout inside <main> */
+.content {
    display: flex;
+   flex-direction: row;
    justify-content: space-between;
+   align-items: flex-start;
    gap: 20px;
 }
 
-/* Main section on the left */
+/* Left content area */
 section {
    flex: 2 1 65%;
+   padding: 10px;
 }
 
-/* Sidebar on the right */
+/* Right sidebar */
 aside {
    flex: 1 1 30%;
    border: 2px solid steelblue;
@@ -77,11 +80,15 @@ aside {
    height: fit-content;
 }
 
+
+/* Sidebar heading */
 aside h3 {
    color: maroon;
    margin-top: 0;
 }
 
+
+/* Sidebar list */
 aside ul {
    line-height: 1.5;
    list-style-position: inside;
@@ -89,7 +96,7 @@ aside ul {
    margin: 0;
 }
 
-/* Link styling */
+/* Section links */
 section a:link,
 section a:visited {
    color:maroon;
@@ -101,6 +108,7 @@ section a:focus {
    color: steelblue;
 }
 
+/* Sidebar links */
 section a:link,
 section a:visited {
    color: steelblue;
@@ -112,7 +120,7 @@ aside a:focus {
    color: maroon;
 }
 
-/* Footer */
+/* Footer styling */
 footer {
    text-align: center;
    font-size: 0.8em;
@@ -120,4 +128,15 @@ footer {
    color: white;
    padding: 10px;
    margin-top: 20px;
+}
+
+/* Responsive fallback */
+@media (max-width: 800px) {
+   .content {
+      flex-direction: column;
+   }
+
+   body {
+      width: 90%;
+   }
 }
