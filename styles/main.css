@@ -13,7 +13,7 @@ body {
    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Make all the links hold */
+/* Make all the links bold */
 a {
    font-weight: bold;
 }
@@ -81,6 +81,11 @@ aside h3 {
 
 aside ul {
    line-height: 1.5;
+   columns: 2;
+   column-gap: 20px;
+   list-style-position: inside;
+   padding: 0;
+   margin: 0;
 }
 
 /* Section link styling */
@@ -115,4 +120,11 @@ footer {
    color: white;
    padding: 10px;
    margin-top: 20px;
+}
+
+/* Responsive: collapse aside columns on small screens */
+@media (max-width: 600px) {
+   aside ul {
+      columns: 1;
+   }
 }
