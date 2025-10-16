@@ -1,99 +1,111 @@
-/* Set default font and body layout */
-body {
-   font-family: Arial, Helvetica, sans-serif;
-   width: 700px;
-   margin: 20px auto; /* Center the page */
-   border: 2px solid steelblue;
-   box-shadow: 5px 5px 10px black;
-   background-color: white;
-   padding: 20px;
+/* Responsive base font size */
+html {
+   font-size: 1.2vw;
 }
 
+/* Fluid body layout */
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+   margin: 0 auto;
+   padding: 20px;
+   background-color: white;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
 
-/* Make all the links bold */
+/* Make all the links hold */
 a {
    font-weight: bold;
 }
 
-
 /* Style for all h1 elements */
 h1 {
-   font-size: 2.5em; /* Adjust this value as needed */
+   font-size: 2.5em;
 }
-
 
 /* Header styles */
 header {
    background: linear-gradient(white, lightsteelblue);
    padding: 20px;
-   overflow: auto; /* Clear floats */
+   overflow: auto;
    border-bottom: 4px solid steelblue;
+   display: flex;
+   align-items: center;
 }
 
+header img {
+   flex-shrink: 0;
+   width: 100%;
+   max-width: 120px;
+   min-width: 100px;
+   height: auto;
+   margin-right: 20px;
+}
 
 header h1 {
    color: steelblue;
    font-style: italic;
    font-size: 3em;
+   margin: 0;
 }
-
 
 header h2 {
    font-size: 1.5em;
+   margin: 0;
 }
 
-
-/* Float the logo image and add spacing */
-header img {
-   float: left;
-   margin-right: 20px;
+/*Flexbox layout for main content */
+main {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
 }
 
+/* Section content styles */
+section {
+   flex: 2 1 60%;
+   padding: 10px;
+}
+
+/* Aside styles */
+aside {
+   flex: 1 1 30%;
+   border: 2px solid steelblue;
+   border-radius: 10px;
+   padding: 15px;
+}
+
+aside h3 {
+   color: maroon;
+}
+
+aside ul {
+   line-height: 1.5;
+}
 
 /* Section link styling */
 section a:link,
 section a:visited {
-   color: maroon;
+   color:maroon;
    text-decoration: underline;
 }
-
 
 section a:hover,
 section a:focus {
    color: steelblue;
 }
 
-/* Aside styles */
-aside {
-   border: 2px solid steelblue;
-   border-radius: 10px;
-   padding: 15px;
-   margin-top: 20px;
-}
-
-
-aside h3 {
-   color: maroon;
-}
-
-
-aside ul {
-   line-height: 1.5;
-}
-
-
+/* Aside link styling */
 aside a:link,
 aside a:visited {
    color: steelblue;
    text-decoration: underline;
 }
 
-
 aside a:hover,
 aside a:focus {
    color: maroon;
 }
-
 
 /* Footer styling */
 footer {
@@ -102,4 +114,5 @@ footer {
    background-color: steelblue;
    color: white;
    padding: 10px;
+   margin-top: 20px;
 }
