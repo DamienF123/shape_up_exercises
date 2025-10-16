@@ -1,29 +1,30 @@
-/* Responsive base font size */
+/* Base font size for responsiveness */
 html {
    font-size: 1.2vw;
 }
 
-/* Fluid body layout */
+/* Full-width body */
 body {
    font-family: Arial, Helvetica, sans-serif;
-   width: 100%;
-   margin: 0 auto;
+   width: 700px;
+   margin: 20px auto;
    padding: 20px;
    background-color: white;
-   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+   border: 2px solid steelblue;
+   box-shadow: 5px 5px 10px black;
 }
 
-/* Make all the links bold */
+/* Make all links hold */
 a {
    font-weight: bold;
 }
 
-/* Style for all h1 elements */
+/* h1 styling */
 h1 {
    font-size: 2.5em;
 }
 
-/* Header styles */
+/* Header */
 header {
    background: linear-gradient(white, lightsteelblue);
    padding: 20px;
@@ -54,39 +55,44 @@ header h2 {
    margin: 0;
 }
 
-/* Flexbox layout for main content */
+/* Two-column layout */
 main {
    display: flex;
-   flex-wrap: wrap;
+   justify-content: space-between;
    gap: 20px;
 }
 
-/* Section content styles */
+/* Main section on the left */
 section {
-   flex: 2 1 60%;
-   padding: 10px;
+   flex: 2 1 65%;
 }
 
-/* Aside styles */
+/* Sidebar on the right */
 aside {
    flex: 1 1 30%;
    border: 2px solid steelblue;
    border-radius: 10px;
    padding: 15px;
+   background-color: #f9f9f9;
+   height: fit-content;
 }
 
 aside h3 {
    color: maroon;
+   margin-top: 0;
 }
 
 aside ul {
    line-height: 1.5;
+   list-style-position: inside;
+   padding: 0;
+   margin: 0;
 }
 
-/* Section link styling */
+/* Link styling */
 section a:link,
 section a:visited {
-   color: maroon;
+   color:maroon;
    text-decoration: underline;
 }
 
@@ -95,9 +101,8 @@ section a:focus {
    color: steelblue;
 }
 
-/* Aside link styling */
-aside a:link,
-aside a:visited {
+section a:link,
+section a:visited {
    color: steelblue;
    text-decoration: underline;
 }
@@ -107,7 +112,7 @@ aside a:focus {
    color: maroon;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
    text-align: center;
    font-size: 0.8em;
