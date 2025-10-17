@@ -96,7 +96,7 @@ footer {
 }
 
 /* Responsive layout for small screens */
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
   .three-column {
     flex-direction: column;
   }
