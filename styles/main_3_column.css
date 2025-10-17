@@ -44,21 +44,20 @@ header h2 {
   margin: 0;
 }
 
-/* FLEX layout for main area */
+/* FLEX layout for 3-column main area */
 .two-column {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 20px;
+  align-items: flex-start;
 }
 
 /* LEFT COLUMN */
-section {
+.three-column section {
   flex: 2;
 }
 
-/* RIGHT COLUMN */
-aside {
+/* BOTH ASIDES */
+three-column aside {
   flex: 1;
   border: 2px solid steelblue;
   border-radius: 10px;
@@ -91,8 +90,8 @@ aside a:hover {
     flex-direction: column;
   }
 
-  section,
-  aside {
+  .three-column section,
+  .three-cilumn aside {
     flex: 1 1 100%;
   }
 }
