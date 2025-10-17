@@ -1,0 +1,108 @@
+/* Base layout */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1000px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border: 2px solid steelblue;
+  box-shadow: 5px 5px 10px black;
+}
+
+/* Make all links bold */
+a {
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  background: linear-gradient(white, lightsteelblue);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid steelblue;
+}
+
+header img {
+  width: 100%;
+  max-width: 120px;
+  min-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+header h1 {
+  font-size: 3em;
+  color: steelblue;
+  font-style: italic;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/* FLEX layout for main area */
+.two-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* LEFT COLUMN */
+section {
+  flex: 2;
+}
+
+/* RIGHT COLUMN */
+aside {
+  flex: 1;
+  border: 2px solid steelblue;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+aside h3 {
+  color: maroon;
+}
+
+aside ul {
+  list-style: inside;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+aside a {
+  color: steelblue;
+  text-decoration: underline;
+}
+
+aside a:hover {
+  color: maroon;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
+
+  section,
+  aside {
+    flex: 1 1 100%;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  background-color: steelblue;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
