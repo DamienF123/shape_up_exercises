@@ -50,6 +50,7 @@ nav {
   border-bottom: 4px solid #1e4d7a;
 }
 
+/* Main menu list */
 .main-menu {
   display: flex;
   flex-wrap: wrap; /* allows wrapping on small screens */
@@ -59,10 +60,12 @@ nav {
   justify-content: center;
 }
 
+/* Main menu items */
 .main-menu > li {
   position: relative;
 }
 
+/* Menu links */
 .main-menu a {
   display: block;
   padding: 15px 20px;
@@ -71,6 +74,7 @@ nav {
   font-weight: bold;
 }
 
+/* Hover effects */
 .main-menu a:hover {
   background-color: #1e4d7a;
   border-radius: 5px;
@@ -96,16 +100,23 @@ nav {
   z-index: 1000;
 }
 
+/* Submenu items */
 .submenu li a {
   padding: 10px 15px;
   white-space: nowrap;
+  color: white;
 }
 
+.submenu li a:hover {
+  background-color: #1e4d7a;
+}
+
+/* Show submenu on hover */
 .main-menu li:hover > .submenu {
   display: block;
 }
 
-/* Responsive nav */
+/* Responsive nav for smaller screens */
 @media (max-width: 768px) {
   .main-menu {
     flex-direction: column;
