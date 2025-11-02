@@ -10,12 +10,7 @@ body {
   box-shadow: 5px 5px 10px black;
 }
 
-/* Make all links bold */
-a {
-  font-weight: bold;
-}
-
-/* Header */
+/* HEADER */
 header {
   background: linear-gradient(white, lightsteelblue);
   padding: 20px;
@@ -33,54 +28,69 @@ header img {
 }
 
 header h1 {
-  font-size: 3em;
+  font-size: 2em;
   color: steelblue;
   font-style: italic;
   margin: 0;
 }
 
 header h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0;
 }
 
-/* Navigation Menu */
+/* ========== MOBILE NAVIGATION ========== */
 nav {
   background-color: steelblue;
   border-bottom: 4px solid #1e4d7a;
-}
-
-/* Main menu list */
-.main-menu {
-  display: flex;
-  flex-wrap: wrap; /* allows wrapping on small screens */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-}
-
-/* Main menu items */
-.main-menu > li {
   position: relative;
 }
 
-/* Menu links */
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Label as hamburger */
+.menu-toggle {
+  display: block;
+  background: #1e4d7a;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/* Menu hidden by defaut */
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+}
+
+/* Show menu when checkbox checked */
+#menu-toggle:checked + .menu-toggle + .main-menu {
+  display: flex;
+}
+
+.main-menu li {
+  border-bottom: 1px solid #1e4d7a;
+}
+
 .main-menu a {
   display: block;
   padding: 15px 20px;
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
-/* Hover effects */
 .main-menu a:hover {
   background-color: #1e4d7a;
-  border-radius: 5px;
 }
 
-/* Highlight current page */
 .main-menu a.current {
   border: 2px solid white;
   border-radius: 20px;
@@ -89,65 +99,33 @@ nav {
 /* Submenus */
 .submenu {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: steelblue;
+  background-color: #4682b4;
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 180px;
-  z-index: 1000;
 }
 
-/* Submenu items */
-.submenu li a {
-  padding: 10px 15px;
-  white-space: nowrap;
-  color: white;
-}
-
-.submenu li a:hover {
-  background-color: #1e4d7a;
-}
-
-/* Show submenu on hover */
-.main-menu li:hover > .submenu {
+li:hover > .submenu {
   display: block;
 }
 
-/* Responsive nav for smaller screens */
-@media (max-width: 768px) {
-  .main-menu {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .main-menu li {
-    width: 100%;
-  }
-
-  .submenu {
-    position: static;
-  }
+.submenu li a {
+  padding: 10px 20px;
 }
 
-/* FLEX layout for main area */
+/* MAIN CONTENT - STACKED LAYOUT */
 .two-column {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 20px;
 }
 
-/* LEFT COLUMN */
 section {
-  flex: 2;
+  order: 1;
 }
 
-/* RIGHT COLUMN */
 aside {
-  flex: 1;
+  order: 2;
   border: 2px solid steelblue;
   border-radius: 10px;
   padding: 15px;
@@ -173,19 +151,7 @@ aside a:hover {
   color: maroon;
 }
 
-/* Responsive for small screens */
-@media (max-width: 768px) {
-  .two-column {
-    flex-direction: column;
-  }
-
-  section,
-  aside {
-    flex: 1 1 100%;
-  }
-}
-
-/* Footer */
+/* FOOTER */
 footer {
   text-align: center;
   font-size: 0.8em;
@@ -193,4 +159,64 @@ footer {
   color: white;
   padding: 10px;
   margin-top: 20px;
+}
+
+/* ========================
+   MEDIA QUERIES
+======================== */
+/* 1 Medium screens two-column layout */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  section {
+    flex: 2;
+  }
+
+  aside {
+    flex: 1;
+  }
+}
+
+/* 2 Large screens: horizontal menu */
+@media (min-width: 900px) {
+  /* Hide hamburger */
+  .menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .main-menu li {
+    position: relative;
+    border: none;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: steelblue;
+    min-width: 180px;
+    z-index: 1000;
+  }
+
+  .submenu li a {
+    padding: 10px 15px;
+  }
+
+  .main-menu li:hover > .submenu {
+    display: block;
+  }
 }
