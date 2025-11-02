@@ -51,7 +51,7 @@ nav {
   display: none;
 }
 
-/* Label as hamburger (Visable on small screens) */
+/* Label as hamburger */
 .menu-toggle {
   display: block;
   background: #1e4d7a;
@@ -62,17 +62,17 @@ nav {
   font-size: 1.2em;
 }
 
-/* Menu hidden by default on mobile */
+/* Menu hidden by default (Sidebar style setup) */
 .main-menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* Always display in the vertical layout */
   display: none;
   flex-direction: column;
 }
 
-/* Show menu when checkbox checked (mobile toggle) */
+
+/* Show menu when checkbox checked (Slide onto screen) */
 #menu-toggle:checked + .menu-toggle + .main-menu {
   display: flex;
 }
@@ -106,7 +106,6 @@ nav {
   padding: 0;
 }
 
-/* Hovering over a main menu item shows its submenu (works on touch and desktop) */
 li:hover > .submenu {
   display: block;
 }
@@ -182,6 +181,7 @@ footer {
   }
 }
 
+/* 2 Large screens: horizontal menu (original code maintained) */
 @media (min-width: 900px) {
   /* Hide hamburger on large screens */
   .menu-toggle {
