@@ -6,113 +6,10 @@
 	<title>Shape Up! | Strength Training</title>
 	<link rel="stylesheet" href="../styles/main.css">
 	<style>
-		/* Inline CSS just for clarity: move to main.css if needed */
-		body {
-			font-family: arial, sans-serif;
-			margin: 0;
-			background-color: #fff;
-		}
-
-		header {
-			background-color: #e6f0fa;
-			padding: 10px 20px;
-			border-bottom: 1px solid #ccc;
-		}
-
-		header a img {
-			vertical-align: middle;
-		}
-
-		header h1 {
-			display: inline;
-			color: #2a74b9;
-			font-size: 1.8em;
-			margin-left: 10px;
-			vertical-align: middle;
-		}
-
-		header p {
-			margin-left: 10px;
-			font-style: italic;
-			color: #333;
-		}
-
-		nav {
-			background-color: #4d8dc9;
-			overflow: hidden;
-			border-bottom: 2px solid #4d8dc9;
-		}
-
-		nav a {
-			float: left;
-			color: white;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			border-right: 1px solid #3a77b6;
-		}
-
-		nav a.current {
-			background-color: white;
-			color: #4d8dc9;
-			border: 2px solid white;
-			border-bottom: none;
-		}
-
-		nav a:hover {
-			background-color: #3a77b6;
-		}
-
-		main {
-			display: flex;
-			padding: 20px;
-		}
-
-		section {
-			flex: 3;
-			padding-right: 20px;
-		}
-
-		section h2 {
-			color: #b30000;
-		}
-
-		aside {
-			flex: 1;
-			border: 1px solid #b3c6e0;
-			padding: 15px;
-			background-color: #f9fbfd;
-			height: fit-content;
-		}
-
-		aside h3 {
-			color: #b30000;
-		}
-
+		/* Removes bullets from aside links */
 		aside ul {
 			list-style-type: none;
 			padding-left: 0;
-		}
-
-		aside ul li {
-			margin-bottom: 8px;
-		}
-
-		aside a {
-			color: #0056b3;
-			text-decoration: none;
-		}
-
-		aside a:hover {
-			text-decoration: none;
-		}
-
-		footer {
-			text-align: center;
-			background-color: #4d8dc9;
-			color: white;
-			padding: 10px;
-			margin-top: 20px;
 		}
 	</style>
 </head>
@@ -125,10 +22,12 @@
 	</header>
 
 	<nav>
-		<a href="#" class="current">Strength Training</a>
-		<a href="../cardio/cardio.html">Cardio Exercises</a>
-		<a href="../stress/stress.html">Stress Relief</a>
-		<a href="../healthy/healthy.html">Healthy Diets</a>
+		<ul>
+			<a href="#" class="current">Strength Training</a>
+			<a href="../cardio/cardio.html">Cardio Exercises</a>
+			<a href="../stress/stress.html">Stress Relief</a>
+			<a href="../healthy/healthy.html">Healthy Diets</a>
+		</ul>
 	</nav>
 
 	<main>
@@ -149,14 +48,31 @@
 
 			<h3>Exercises and sports</h3>
 			<p>Training commonly uses technique of progressively increasing the force output of the muscle through incremental weight increases. It uses a variety of exercises and types of equiptment to target specific muscle groups.</p>
+			
 			<p>Some sports where strength training is central are bodybuilding, weightlifing, shotput, discus throw, and javelin throw. Many other sports use strength training regimen. Thses include tennis, American football, wrestling, track and field, rowing, lacrosse, basketball, hockey, and soccer</p>
 
 			<h3>Additional information</h3>
-			<p>Want to start a strength training regimen?
+			<p>
+				Want to start a strength training regimen?
 				<a href="mailto:info@shapeup.com">Send us an email</a> or
 				<a href="tel:+15555551234">call us</a> and we'll send you your own complimentary strength program.
 			</p>
 		</section>
+
+		<aside>
+			<h3>Additional resources</h3>
+			<ul>
+				<li><a href="../resources/physical_activity.html">Physical activity and health</a></li>
+				<li><a href="../resources/stretching.html">Stretching exercises</a></li>
+				<li><a href="#">Strength training</a></li>
+				<li><a href="../resources/cardio.html">Cardiovascular training</a></li>
+				<li><a href="../resources/yoga.html">Yoga workout</a></li>
+			</ul>
+		</aside>
 	</main>
+
+	<footer>
+		<p>&copy; Shape up!</p>
+	</footer>
 </body>
 </html>
