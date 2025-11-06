@@ -16,19 +16,55 @@
 
 <body>
 	<header>
-		<a href="../index.html"><img src="../images/logo.png" alt="Shape Up! logo"></a>
+		<a href="images/shape_up_logo.png"><img src="../images/logo.png" alt="Shape Up! logo"></a>
 		<h1>Shape Up!</h1>
 		<p>Find the best fit for you</p>
 	</header>
 
-	<nav>
-		<ul>
-			<a href="#" class="current">Strength Training</a>
-			<a href="../cardio/cardio.html">Cardio Exercises</a>
-			<a href="../stress/stress.html">Stress Relief</a>
-			<a href="../healthy/healthy.html">Healthy Diets</a>
-		</ul>
-	</nav>
+	<!-- NAVIGATION MENU -->
+   <nav>
+    <!-- Hidden checkbox to control menu visability-->
+     <input type="checkbox" id="menu-toggle" />
+     <label for="menu-toggle" class="menu-toggle">&#9776</label>
+     
+    <ul class="main-menu">
+      <li><a href="index.html" class="current">Home</a></li>
+
+      <li>
+        <a href="strength"/strength.html">Strength Training</a>
+        <ul class="submenu">
+          <li><a href="strength/strength.html">Strength Training</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="cardio/cardio.html">Cardio Exercises</a>
+        <ul class="submenu">
+          <li><a href="cardio/cardio.html">Cardio Workouts</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="stress/stress.html">Stress Relief</a>
+        <ul class="submenu">
+          <li><a href="stress/stress.html">What is Stress</a></li>
+          <li><a href="stress/tips.html">5 Helpful Tips</a></li>
+          <li><a href="stress/meditaion.html">Meditation</a></li>
+          <li><a href="stress/vipassana.html">vipassana</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="diet/diet.html">Healthy Diets</a>
+        <ul class="submenu">
+          <li><a href="diet/diet.html">Healthy Eating</a></li>
+          <li><a href="diet/meals.html">Plan Your Meals</a></li>
+          <li><a href="diet/calories.html">Count Your Calories</a></li>
+          <li><a href="diet/bmi.html">Calculate Your BMI</a></li>
+        </ul>
+      </li>
+    </ul>
+   </nav>
 
 	<main>
 		<section>
