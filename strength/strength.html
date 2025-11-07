@@ -16,32 +16,28 @@
 
 <body>
 	<header>
-		<a href="images/shape_up_logo.png"><img src="../images/logo.png" alt="Shape Up! logo"></a>
-		<h1>Shape Up!</h1>
-		<p>Find the best fit for you</p>
+		<!-- Logo is now a link to home page -->
+		 <a href="../index.html">
+			<img src="../images/shape_up_logo.png" alt="Shape Up! logo" />
+		 </a>
+		 <div>
+			<h1>Shape Up!</h1>
+			<p>Find the best fit for you</p>
+		 </div>
 	</header>
 
 	<!-- NAVIGATION MENU -->
-   <nav>
-    <!-- Hidden checkbox to control menu visability-->
-     <input type="checkbox" id="menu-toggle" />
-     <label for="menu-toggle" class="menu-toggle">&#9776</label>
-     
+   <nav> 
     <ul class="main-menu">
-      <li><a href="index.html" class="current">Home</a></li>
+      <li><a href="../index.html">Home</a></li>
 
       <li>
-        <a href="strength"/strength.html">Strength Training</a>
-        <ul class="submenu">
-          <li><a href="strength/strength.html">Strength Training</a></li>
-        </ul>
-      </li>
+		<!-- Current link is # and styled as current -->
+		<a href="#" class="current">Strength Training</a>
+	  </li>
 
       <li>
         <a href="cardio/cardio.html">Cardio Exercises</a>
-        <ul class="submenu">
-          <li><a href="cardio/cardio.html">Cardio Workouts</a></li>
-        </ul>
       </li>
 
       <li>
@@ -66,47 +62,55 @@
     </ul>
    </nav>
 
-	<main>
-		<section>
-			<h2>Strength Training</h2>
-			<p>Strength training is a type of physical exercise that uses resistance to induce contraction. This builds strength, anaerobic endurance, and size of skeletal muscles</p>
+   <main class="two-column">
+	<section>
+		<h2>Strength Training</h2>
+		<p>
+			Strength training is a type of physical exercise that uses resistance to induce  uscular contraction. This builds the strength, anaerobic endurance, and size of skeletal muscles.
+		</p>
 
-			<h3>Benefits</h3>
-			<p>When properly performed, strength training can provide significant functional benefits and improvement in overall health and well-being. Some of the benefits are:</p>
-			<ul>
-				<li>increased bone, muscle, tendon, and ligament strength and toughness</li>
-				<li>improved joint function</li>
-				<li>reduced potential for injury</li>
-				<li>increased bone density</li>
-				<li>increased metabolism</li>
-				<li>improved cardiac function</li>
-			</ul>
+		<h3>Benefits</h3>
+		<p>
+			When properly performed, strength training can provide significant functional benefits and improvement in overall health and well-being. Some of the benefits are:
+		</p>
+		<ul>
+			<li>increased bone, muscle, tendon, and ligament strength and toughness</li>
+			<li>improved joint function</li>
+			<li>reduced potential for injury</li>
+			<li>increased bone density</li>
+			<li>increased metabolism</li>
+			<li>improved cardiac function</li>
+		</ul>
 
-			<h3>Exercises and sports</h3>
-			<p>Training commonly uses technique of progressively increasing the force output of the muscle through incremental weight increases. It uses a variety of exercises and types of equiptment to target specific muscle groups.</p>
-			
-			<p>Some sports where strength training is central are bodybuilding, weightlifing, shotput, discus throw, and javelin throw. Many other sports use strength training regimen. Thses include tennis, American football, wrestling, track and field, rowing, lacrosse, basketball, hockey, and soccer</p>
+		<h3>Exercises and sports</h3>
+		<p>
+			Training commonly uses the technique of progressively increasing the force output of the muscle through incremental weight increases. It uses a variety of exercises and types of equipment to target specific muscle groups.
+		</p>
 
-			<h3>Additional information</h3>
-			<p>
-				Want to start a strength training regimen?
-				<a href="mailto:info@shapeup.com">Send us an email</a> or
-				<a href="tel:+15555551234">call us</a> and we'll send you your own complimentary strength program.
-			</p>
-		</section>
+		<p>
+			Some sports where strength training is central are bodybuilding, weightlifing, shotput, discus throw, and javelin throw. Many other sports use strength training as part ofn their training regimen. These include tennis, American football, wrestling, track and field, rowing, lacrosse, basketball, hockey, wrestling, and soccer.
+		</p>
 
-		<aside>
-			<h3>Additional resources</h3>
-			<ul>
-				<li><a href="../resources/physical_activity.html">Physical activity and health</a></li>
-				<li><a href="../resources/stretching.html">Stretching exercises</a></li>
-				<li><a href="#">Strength training</a></li>
-				<li><a href="../resources/cardio.html">Cardiovascular training</a></li>
-				<li><a href="../resources/yoga.html">Yoga workout</a></li>
-			</ul>
-		</aside>
-	</main>
+		<h3>Additional information</h3>
+		<p>
+			Want to start a strength training regimen?
+			<a href="mailto:info@shapeup.com">Send us an email</a> or
+			<a href="tel:+15555551234">call us</a> and we'll send you our complimentary strength training program.
+		</p>
+	</section>
 
+	<aside>
+		<h3>Additional resources</h3>
+		<ul>
+			<li><a href="https://www.cdc.gov/physical-activity-basics/benefits/index.html">Physical activity and health</a></li>
+			<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/flexibility-exercise-stretching">Stretching exercises</a></li>
+			<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/strength-and-resistance-training-exercise">Strength training</a></li>
+			<li><a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart">Cardiovascular training</a></li>
+			<li><a href="https://www.self.com/gallery/power-yoga-workout">Yoga workout</a></li>
+		</ul>
+	</aside>
+   </main>
+   
 	<footer>
 		<p>&copy; Shape up!</p>
 	</footer>
