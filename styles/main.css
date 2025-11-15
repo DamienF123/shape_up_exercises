@@ -26,7 +26,8 @@ header {
 }
 
 header img {
-  width: 100%;
+  width: 120px;
+  height: auto;
   margin-right: 20px;
 }
 
@@ -42,7 +43,7 @@ header h2 {
   margin: 0;
 }
 
-/* ========== NAVIGATION (MOBILE FIRST) ========== */
+/* NAV */
 nav {
   background-color: steelblue;
   border-bottom: 4px solid #1e4d7a;
@@ -84,13 +85,13 @@ nav {
   color: white;
 }
 
-.main-menu a:hover {
-  background-color: #1e4d7a;
-}
-
 .main-menu a.current {
   border: 2px solid white;
   border-radius: 20px;
+}
+
+.main-menu a:hover {
+  background-color: #1e4d7a;
 }
 
 /* TWO COLUMN LAYOUT */
@@ -100,23 +101,22 @@ nav {
   gap: 20px;
 }
 
+@media (min-width: 768px) {
+  .two-column {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
 section {
-  order: 1;
+  flex: 2;
 }
 
 aside {
-  order: 2;
-  border: 2px solid steelblue;
-  background: #f9f9f9;
-  border-radius: 10px;
-  padding: 15px;
+  flex: 1;
 }
 
-aside h3 {
-  color: maroon;
-}
-
-/* FLOATING FIGURE (Stress Page) */
+/* FIGURE */
 .stress-figure {
   float: left;
   width: 250px;
@@ -128,7 +128,7 @@ aside h3 {
   border: 2px solid steelblue;
 }
 
-/* ICON LIST FOR ASIDE */
+/* ASIDE ICONS */
 .icon-list {
   list-style: none;
   padding: 0;
@@ -150,7 +150,6 @@ aside h3 {
 
 aside a {
   color: steelblue;
-  text-decoration: underline;
 }
 
 aside a:hover {
@@ -167,23 +166,8 @@ footer {
   font-size: 0.8em;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-  .two-column {
-    flex-direction: row;
-  }
-
-  section {
-    flex: 2;
-  }
-
-  aside {
-    flex: 1;
-  }
-}
-
-@media (min-width: 900px) {
-
+/* DEAKTOP NAV */
+@media (max-width: 900px) {
   .menu-toggle {
     display: none;
   }
@@ -197,3 +181,4 @@ footer {
   .main-menu li {
     border: none;
   }
+}
