@@ -3,20 +3,67 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shape Up! | Strength Training</title>
+	<title>Shape Up! | Stress Relief</title>
 	<link rel="stylesheet" href="../styles/main.css">
+
+	<!-- Inline CSS specific to this page -->
 	<style>
-		/* Removes bullets from aside links */
+		/* Import custom font for page title */
+		@font-face {
+			font-family: "American Captain";
+			src: url("../fonts/American Captain.ttf") format("truetype");
+		}
+
+		/* Apply custom font to H1 in header */
+		header h1 {
+			font-family: "American Captain", sans-serif;
+		}
+
+		/* left-aligned figure */
+		figure {
+			float: left;
+			margin-right: 1rem;
+			margin-bottom: 0.5rem;
+		}
+
+		figure img {
+			width: 260px;
+			height: auto;
+			display: block;
+		}
+
+		figure figcaption {
+			font-size: 0.9rem;
+			color: #444;
+		}
+
+		/* Aside Icons */
 		aside ul {
-			list-style-type: none;
+			list-style: none;
 			padding-left: 0;
 		}
+
+		aside li {
+			background-repeat: no-repeat;
+			background-position: 0.2px;
+			background-size: 22px 22px;
+			padding-left: 30px;
+			margin-bottom: 0.8rem;
+		}
+
+		.tip1 { background-image: url("../images/run-icon.png"); }
+		.tip2 { background-image: url("../images/stretch-icon.png"); }
+		.tip3 { background-image: url("../images/strength-icon.png"); }
+		.tip4 { background-image: url("../images/cardio-icon.png"); }
+		.tip5 { background-image: url("../images/yoga-icon.png"); }
+
+		/* Clears float after text */
+		.clear { clear: both; }
 	</style>
 </head>
 
 <body>
 	<header>
-		<!-- Logo is now a link to home page -->
 		 <a href="../index.html">
 			<img src="../images/shape_up_logo.png" alt="Shape Up! logo" />
 		 </a>
@@ -32,8 +79,7 @@
       <li><a href="../index.html">Home</a></li>
 
       <li>
-		<!-- Current link is # and styled as current -->
-		<a href="#" class="current">Strength Training</a>
+		<a href="../strength/strength.html">Strength Training</a>
 	  </li>
 
       <li>
@@ -41,7 +87,8 @@
       </li>
 
       <li>
-        <a href="stress/stress.html">Stress Relief</a>
+		<!-- Current link is # and styled as current -->
+		 <a href="#" class="current">Stress Relief</a>
         <ul class="submenu">
           <li><a href="stress/stress.html">What is Stress</a></li>
           <li><a href="stress/tips.html">5 Helpful Tips</a></li>
@@ -64,38 +111,28 @@
 
    <main class="two-column">
 	<section>
-		<h2>Strength Training</h2>
-		<p>
-			Strength training is a type of physical exercise that uses resistance to induce  uscular contraction. This builds the strength, anaerobic endurance, and size of skeletal muscles.
-		</p>
+		<h2>What is stress?</h2>
 
-		<h3>Benefits</h3>
-		<p>
-			When properly performed, strength training can provide significant functional benefits and improvement in overall health and well-being. Some of the benefits are:
-		</p>
-		<ul>
-			<li>increased bone, muscle, tendon, and ligament strength and toughness</li>
-			<li>improved joint function</li>
-			<li>reduced potential for injury</li>
-			<li>increased bone density</li>
-			<li>increased metabolism</li>
-			<li>improved cardiac function</li>
-		</ul>
+		<!-- REQUIRED FIGURE -->
+		 <figure>
+			<img src="../images/stress.jpg" alt="Person exeriencing stress">
+			<figcaption>Stress can come from work, family, or health problems</figcaption>
+		 </figure>
 
-		<h3>Exercises and sports</h3>
 		<p>
-			Training commonly uses the technique of progressively increasing the force output of the muscle through incremental weight increases. It uses a variety of exercises and types of equipment to target specific muscle groups.
+			Stress is the feeling that people have when they are overloaded and struggling to cope with demands. Anything that poses a real or perceived challenge or threat to a person's well-being can cause stress.
 		</p>
 
 		<p>
-			Some sports where strength training is central are bodybuilding, weightlifing, shotput, discus throw, and javelin throw. Many other sports use strength training as part ofn their training regimen. These include tennis, American football, wrestling, track and field, rowing, lacrosse, basketball, hockey, wrestling, and soccer.
+			Stress can also be a motivator. It can be essential to survival. The "fight-or-flight" mechanism helps us know when and how to respond to danger. But when this mechanism is triggered too easily, or when there are too many stressors at one time. It can become harmful to a person's mental and physicla health.
 		</p>
 
-		<h3>Additional information</h3>
+		<div class="clear"></div>
+
+		<h2>Managing Stress</h2>
+
 		<p>
-			Want to start a strength training regimen?
-			<a href="mailto:info@shapeup.com">Send us an email</a> or
-			<a href="tel:+15555551234">call us</a> and we'll send you our complimentary strength training program.
+			To help manage stress, try the following:
 		</p>
 	</section>
 
