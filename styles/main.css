@@ -1,10 +1,4 @@
-/* Load custom font foe tile */
-@font-face {
-  font-family: "American Captain";
-  src: url("fonts/American Captain.ttf") format("truetype");
-}
-
-/* Page Container */
+/* Base layout */
 body {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 1000px;
@@ -13,149 +7,220 @@ body {
   padding: 20px;
   background: white;
   border: 2px solid steelblue;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 10px black;
 }
 
 /* HEADER */
 header {
-  display: flex;
-  align-items: center;
   background: linear-gradient(white, lightsteelblue);
   padding: 20px;
+  display: flex;
+  align-items: center;
   border-bottom: 4px solid steelblue;
 }
 
 header img {
-  width: 110px;
+  width: 100%;
+  max-width: 120px;
+  min-width: 100px;
+  height: auto;
   margin-right: 20px;
 }
 
-.title-block h1 {
-  margin: 0;
-  font-family: "American Captain", sans-serif;
-  font-size: 2.5em;
+header h1 {
+  font-size: 2em;
   color: steelblue;
-}
-
-.title-block h2 {
+  font-style: italic;
   margin: 0;
-  font-size: 1.2em;
 }
 
-/* NAVIGATION */
+header h2 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* ========== MOBILE NAVIGATION (VERICAL MENU) ========== */
 nav {
   background-color: steelblue;
   border-bottom: 4px solid #1e4d7a;
+  position: relative;
 }
 
-nav ul {
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Label as hamburger */
+.menu-toggle {
+  display: block;
+  background: #1e4d7a;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/* Menu hidden by default (Sidebar style setup) */
+.main-menu {
   list-style: none;
-  display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
+  display: none;
+  flex-direction: column;
 }
 
-nav li {
-  border-right: 1px solid #1e4d7a;
+
+/* Show menu when checkbox checked (Slide onto screen) */
+#menu-toggle:checked + .menu-toggle + .main-menu {
+  display: flex;
 }
 
-nav li:last-child {
-  border-right: none;
+.main-menu li {
+  border-bottom: 1px solid #1e4d7a;
 }
 
-nav a {
+.main-menu a {
   display: block;
+  padding: 15px 20px;
   color: white;
   text-decoration: none;
-  padding: 15px 30px;
 }
 
-nav a:hover {
-  background: #1e4d7a;
+.main-menu a:hover {
+  background-color: #1e4d7a;
 }
 
-nav a.current {
+.main-menu a.current {
   border: 2px solid white;
   border-radius: 20px;
 }
 
-/* LAYOUT */
-.layout {
+/* Submenus for mobile */
+.submenu {
+  display: none;
+  background-color: #4682b4;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:hover > .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding: 10px 20px;
+}
+
+/* MAIN CONTENT - STACKED LAYOUT */
+.two-column {
   display: flex;
-  margin-top: 20px;
+  flex-direction: column;
   gap: 20px;
 }
 
 section {
-  flex: 2;
+  order: 1;
 }
 
 aside {
-  flex: 1;
+  order: 2;
   border: 2px solid steelblue;
   border-radius: 10px;
-  background: #f9f9f9;
   padding: 15px;
+  background-color: #f9f9f9;
 }
 
 aside h3 {
   color: maroon;
-  font-size: 1.3em;
 }
 
-/* FIGURE */
-.stress-figure {
-  float: left;
-  width: 230px;
-  margin: 0 20px 10px 0;
+aside ul {
+  list-style: inside;
+  line-height: 1.6;
+  padding-left: 0;
 }
 
-.stress-figure img {
-  width: 100%;
-  border: 2px solid steelblue;
-}
-
-.stress-figure figcaption {
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-/* ICON LIST */
-.icon-list {
-  list-style: none;
-  padding: 0;
-}
-
-.icon-list li {
-  padding-left: 28px;
-  margin-bottom: 12px;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  background-position: 0 3px;
-}
-
-.icon-list li:nth-child(1) { background-image: url("images/run-icon.png"); }
-.icon-list li:nth-child(2) { background-image: url("images/stretch-icon.png"); }
-.icon-list li:nth-child(3) { background-image: url("images/strength-icon,png"); }
-.icon-list li:nth-child(4) { background-image: url("images/cardio-icon.png"); }
-.icon-list li:nth-child(5) { background-image: url("images/yoga-icon.png"); }
-
-.icon-list a {
+aside a {
   color: steelblue;
   text-decoration: underline;
 }
 
-.icon-list a:hover {
+aside a:hover {
   color: maroon;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  background: steelblue;
+  font-size: 0.8em;
+  background-color: steelblue;
   color: white;
-  font-size: 0.9em;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* ========================
+   MEDIA QUERIES
+======================== */
+/* 1 Medium screens two-column layout */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  section {
+    flex: 2;
+  }
+
+  aside {
+    flex: 1;
+  }
+}
+
+/* 2 Large screens: horizontal menu (original code maintained) */
+@media (min-width: 900px) {
+  /* Hide hamburger on large screens */
+  .menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  /* Make the main menu horizontal */
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .main-menu li {
+    position: relative;
+    border: none;
+  }
+
+  /* Submenus for large screens (dropdown) */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: steelblue;
+    min-width: 180px;
+    z-index: 1000;
+  }
+
+  .submenu li a {
+    padding: 10px 15px;
+  }
+
+  /* Dropdown appears on hover */
+  .main-menu li:hover > .submenu {
+    display: block;
+  }
 }
