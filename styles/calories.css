@@ -1,0 +1,130 @@
+/* BASIC PAGE STYLES */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #b30000;
+}
+
+/* LARGE SCREEN TABLE LAYOUT */
+.table-wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.calorie-table {
+    width: 70%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.calorie-table th {
+    background: #b30000;
+    color: white;
+    padding: 10px;
+}
+
+.calorie-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+.resources {
+    width: 30%;
+    padding: 15px;
+    border: 2px solid #378cd1;
+    border-radius: 10px;
+    background: #f9f9f9;
+    height: fit-content;
+}
+
+.resources h3 {
+    margin-top: 0;
+    color: #b30000;
+}
+
+.resources ul {
+    padding-left: 20px;
+}
+
+.resources a {
+    color: #0a56a0;
+    text-decoration: none;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+/* SMALL SCREEN (MOBILE) LAYOUT */
+@media screen and (max-width: 760px) {
+
+    /* Resources box removed on small screens */
+    .resources {
+        display: none;
+    }
+
+    .table-wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    /* Convert table into stacked list */
+    .calorie-table,
+    .calorie-table thead,
+    .calorie-table tbody,
+    .calorie-table th,
+    .calorie-table td,
+    .calorie-table tr {
+        display: block;
+    }
+
+    /* Hide the table headers */
+    .calorie-table thead {
+        display: none;
+    }
+
+    .calorie-table tr {
+        border-bottom: 5px solid #378cd1;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .calorie-table td {
+        padding: 6px 10px;
+        border: none;
+        position: relative;
+    }
+
+    /* Label each field on small screens */
+    .calorie-table td:nth-child(1)::before {
+        content: "Category: ";
+        font-weight: bold;
+    }
+
+    .calorie-table td:nth-child(2)::before {
+        content: "Food: ";
+        font-weight: bold;
+    }
+
+    .calorie-table td:nth-child(3)::before {
+        content: "Serving: ";
+        font-weight: bold;
+    }
+
+    .calorie-table td:nth-child(4)::before {
+        content: "Calories: ";
+        font-weight: bold;
+    }
+}
