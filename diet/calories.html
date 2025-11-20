@@ -8,12 +8,46 @@
 </head>
 
 <body>
+
+	<!-- ========== HEADER ========== -->
+	 <header>
+		<div class="logo">
+			<img src="images/shape_up_logo.png" alt="Shape Up logo">
+			<div class="tagline">
+				<h1>SHAPE UP!</h1>
+				<p>Find the best for for you</p>
+			</div>
+		</div>
+
+		<button id="menu-btn">&#9776</button>
+
+		<!-- Navigation -->
+		 <nav id="main-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="strength.html">Strength Training</a></li>
+				<li><a href="cardio.html">Cardio Exercises</a></li>
+				<li>
+					<a href="stress.html">Stress Relief</a>
+					<ul class="submenu">
+						<li><a href="stress/stress.html">What is Stress</a></li>
+          				<li><a href="stress/tips.html">5 Helpful Tips</a></li>
+          				<li><a href="stress/meditaion.html">Meditation</a></li>
+          				<li><a href="stress/vipassana.html">vipassana</a></li>
+					</ul>
+				</li>
+				<li><a href="active" href="calories.html">Healthy Diets</a></li>
+			</ul>
+		 </nav>
+	 </header>
+
+	 <!-- ========== MAIN CONTENT ========== -->
 	<main>
-	    <h1>Calorie Counter</h1>
-		
-		<!-- Calorie table for large screens -->
-		<div class="table-wrapper">
-			<table class="Calorie-table">
+		<h2 class="title">Calorie Counter</h2>
+
+		<div class="layout">
+			<!-- TABLE -->
+			 <table class="calorie-table">
 				<thead>
 					<tr>
 						<th>Category</th>
@@ -26,55 +60,56 @@
 				<tbody>
 					<tr>
 						<td>Beef</td>
-						<td>Frankfurther, Beef</td>
+						<td>Frankfurter, Beef</td>
 						<td>1 each</td>
 						<td>184</td>
 					</tr>
-
 					<tr>
 						<td>Beef</td>
 						<td>Ground Beef</td>
 						<td>4 oz</td>
 						<td>264</td>
 					</tr>
-
 					<tr>
 						<td>Beef</td>
 						<td>T-Bone Steak</td>
 						<td>8 ounces</td>
 						<td>402</td>
 					</tr>
-
 					<tr>
 						<td>Bread</td>
 						<td>Bagel, plain</td>
 						<td>1 bagel</td>
 						<td>360</td>
 					</tr>
-
 					<tr>
 						<td>Bread</td>
 						<td>Bread, sliced</td>
 						<td>1 slice</td>
 						<td>60-80</td>
 					</tr>
-
-					<!-- Add the rest of the rows as needed -->
 				</tbody>
-			</table>
+			 </table>
 
-			<!-- Right-side resources box for large screens -->
-			 <aside class="resources">
-				<h3>Additional Resources</h3>
+			 <!-- SIDEBAR -->
+			  <aside class="resources">
+				<h3>Additional resources</h3>
 				<ul>
 					<li><a href="https://www.cdc.gov/physical-activity-basics/benefits/index.html">Physical activity and health</a></li>
-					<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/flexibility-exercise-stretching">Stretching exercises</a></li>
+					<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/flexibility-exercise-stretching">Strength exercises</a></li>
 					<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/strength-and-resistance-training-exercise">Strength training</a></li>
 					<li><a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart">Cardiovascular training</a></li>
 					<li><a href="https://www.self.com/gallery/power-yoga-workout">Yoga workout</a></li>
 				</ul>
-			 </aside>
+			  </aside>
 		</div>
     </main>
+
+<script>
+	document.getElementById("menu-btn").onclick = function() {
+		document.getElementById("main-nav").classList.toggle("show");
+	}
+</script>
+
 </body>
 </html>

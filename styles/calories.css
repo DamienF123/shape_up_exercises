@@ -1,32 +1,97 @@
-/* BASIC PAGE STYLES */
+/* =====================
+   GENERAL PAGE STYLES
+===================== */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-main {
-    padding: 20px;
+/*=====================
+    HEADER + NAVBAR
+===================== */
+header {
+    background: linear-gradient(#e8edf7, #bcd3eb);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-h1 {
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #1c6fb8;
+}
+
+.logo p {
+    margin: 0;
+    margin-top: -5px;
+    font-size: 0.9rem;
+}
+
+#menu-btn {
+    margin-left: auto;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003366;
+    padding: 8px 12px;
+}
+
+nav ul li a.active {
+    background: #0a70d1;
+    color: white;
+    border-radius: 6px;
+}
+
+/* =====================
+    MAIN TITLE
+===================== */
+.title {
+    margin-top: 25px;
     text-align: center;
     color: #b30000;
 }
 
-/* LARGE SCREEN TABLE LAYOUT */
-.table-wrapper {
-    display: flex;
+/* =====================
+    LARGE SCREEN LAYOUT
+===================== */
+.layout {
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
     gap: 20px;
+    padding: 20px;
 }
 
 .calorie-table {
     width: 70%;
     border-collapse: collapse;
-    background: white;
-    border: 1px solid #ccc;
+    border: 1px solid #aaa;
 }
 
 .calorie-table th {
@@ -36,30 +101,24 @@ h1 {
 }
 
 .calorie-table td {
-    border-bottom: 1px solid #ddd;
     padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
 
 .resources {
     width: 30%;
-    padding: 15px;
-    border: 2px solid #378cd1;
+    border: 2px solid #1c6fb8;
     border-radius: 10px;
-    background: #f9f9f9;
+    padding: 15px;
     height: fit-content;
 }
 
 .resources h3 {
     margin-top: 0;
-    color: #b30000;
-}
-
-.resources ul {
-    padding-left: 20px;
 }
 
 .resources a {
-    color: #0a56a0;
+    color: #1c6fb8;
     text-decoration: none;
 }
 
@@ -67,64 +126,62 @@ h1 {
     text-decoration: underline;
 }
 
-/* SMALL SCREEN (MOBILE) LAYOUT */
-@media screen and (max-width: 760px) {
+/* =====================================
+   SMALL SCREEN LAYOUT (<760px)
+===================================== */
+@media (max-width: 760px) {
 
-    /* Resources box removed on small screens */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #0a70d1;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    nav.show ul {
+        display: block;
+    }
+
+    #menu-btn {
+        display: block;
+        color: #003366;
+        margin-left: auto;
+    }
+
+    .layout {
+        display: block;
+    }
+
     .resources {
         display: none;
     }
 
-    .table-wrapper {
-        display: block;
-        width: 100%;
-    }
-
-    /* Convert table into stacked list */
+    /* --- STACKED TABLE STYLE --- */
     .calorie-table,
     .calorie-table thead,
     .calorie-table tbody,
-    .calorie-table th,
-    .calorie-table td,
-    .calorie-table tr {
+    .calorie-table tr,
+    .calorie-table td {
         display: block;
     }
 
-    /* Hide the table headers */
     .calorie-table thead {
         display: none;
     }
 
     .calorie-table tr {
-        border-bottom: 5px solid #378cd1;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
+        border-bottom: 6px solid #1c6fb8;
+        margin-bottom: 12px;
     }
 
     .calorie-table td {
-        padding: 6px 10px;
-        border: none;
+        padding: 8px;
         position: relative;
     }
 
-    /* Label each field on small screens */
-    .calorie-table td:nth-child(1)::before {
-        content: "Category: ";
-        font-weight: bold;
-    }
-
-    .calorie-table td:nth-child(2)::before {
-        content: "Food: ";
-        font-weight: bold;
-    }
-
-    .calorie-table td:nth-child(3)::before {
-        content: "Serving: ";
-        font-weight: bold;
-    }
-
-    .calorie-table td:nth-child(4)::before {
-        content: "Calories: ";
-        font-weight: bold;
-    }
+    .calorie-table td:nth-child(1)::before { content: "Category: "; font-weight: bold; }
+    .calorie-table td:nth-child(2)::before { content: "Food: "; font-weight: bold; }
+    .calorie-table td:nth-child(3)::before { content: "Serving: "; font-weight: bold; }
+    .calorie-table td:nth-child(4)::before { content: "Calories: "; font-weight: bold; }
 }
