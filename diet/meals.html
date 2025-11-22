@@ -4,12 +4,114 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shape Up! | Meal Plan</title>
+	<link rel="stylesheet" href="main.css"
 </head>
 
 <body>
-	<main>
-	    <h1>Meal Plan</h1>
-		<h2>Under Construction</h2>	    
+	
+	<main class="two-column">
+
+		<section>
+			<h1>Meal plan order form</h1>
+			<p>Fill out the form as completely as possible and we will email you a weekly meal plan...</p>
+
+			<form>
+
+				<!-- ======= ABOUT YOU ======= -->
+				 <fieldset>
+					<legend> Tell us about yourself</legend>
+
+					<label>Full name *
+						<input type="name" name="fullname" required>
+					</label>
+
+					<label>Email *
+						<input type="email" name="email" required>
+					</label>
+
+					<label>Gender *
+						<select name="gender" required>
+							<option value="">Select a gender</option>
+							<option>Female</option>
+							<option>Male</option>
+							<option>Non-binary</option>
+							<option>Prefer not to say</option>
+						</select>
+					</label>
+
+					<label>Height *
+						<input type="text" name="height" placeholder="Example: 5ft, 6in" required>
+					</label>
+
+					<label>Weight *
+						<input type="text" name="weight" placeholder="Example: 145lbs" required>
+					</label>
+
+					<label>
+						<select name="age">
+							<option>Under 18</option>
+							<option>18-29</option>
+							<option>30-45</option>
+							<option>46-60</option>
+							<option>61+</option>
+						</select>
+					</label>
+				 </fieldset>
+
+				 <!-- ======= LIFESTYLE & GOALS ======= -->
+				  <fieldset>
+					<legend>Lifestyle and goals</legend>
+
+					<p>Which currently matches your personal lefestyle?</p>
+					<label><input type="radio" name="lifestyle" checked> Active</label>
+					<label><input type="radio" name="lifestyle" Moderate</label>
+					<label><input type="radio" name="lifestyle" Sedentary</label>
+
+					<p>What are your weight goals></p>
+					<label><input type="radio" name="goal" checked> Active</label>
+					<label><input type="radio" name="goal"> Lose</label>
+					<label><input type="radio" name="goal"> Maintain</label>
+				  </fieldset>
+
+				  <!-- ======= FOOD RESTRICTIONS ======= -->
+				   <fieldset>
+						<legend>Food preferences and restrictions</legend>
+
+						<label>
+							<input type="checkbox" id="otherBox" name="restrict" value="Other">Other, please explain:
+						</label>
+
+						<textarea id="otherText" placeholder="Enter additional restrictions..." disabled></textarea>
+				   </fieldset>
+
+				   <!-- ======= BUTTON GROUP ======= -->
+					<div class="button-row">
+						<button type="submit" class="btn base-btn submit-btn">Submit</button>
+						<button type="reset" class="btn base-btn reset-btn">Reset</button>
+					</div>
+				   
+			</form>
+		</section>
+
+		<aside>
+			<h3>Additional resources</h3>
+			<ul>
+				<li><a href="https://www.cdc.gov/physical-activity-basics/benefits/index.html">Physical activity and health</a></li>
+            	<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/flexibility-exercise-stretching">Stretching exercises</a></li>
+            	<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/strength-and-resistance-training-exercise">Strength training</a></li>
+            	<li><a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart">Cardiovascular training</a></li>
+            	<li><a href="https://www.self.com/gallery/power-yoga-workout">Yoga workout</a></li>
+			</ul>
+		</aside>
+
 	</main>
+
+	<script>
+		// Enable/disable "Other" text area
+		document.getElementById("otherBox").addEventListener("change", function (){
+			document.getElementById("otherText").disabled = !this.checked;
+		})
+	</script>
+	
 </body>
 </html>

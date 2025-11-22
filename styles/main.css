@@ -1,4 +1,6 @@
-/* Base layout */
+/* ==========================
+   BASE LAYOUT
+========================== */
 body {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 1000px;
@@ -10,7 +12,10 @@ body {
   box-shadow: 5px 5px 10px black;
 }
 
-/* HEADER */
+
+/* ==========================
+   HEADER
+========================== */
 header {
   background: linear-gradient(white, lightsteelblue);
   padding: 20px;
@@ -39,19 +44,19 @@ header h2 {
   margin: 0;
 }
 
-/* ========== MOBILE NAVIGATION (VERICAL MENU) ========== */
+/* ==========================
+   MOBILE NAVIGATION
+========================== */
 nav {
   background-color: steelblue;
   border-bottom: 4px solid #1e4d7a;
   position: relative;
 }
 
-/* Hide checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* Label as hamburger */
 .menu-toggle {
   display: block;
   background: #1e4d7a;
@@ -62,7 +67,6 @@ nav {
   font-size: 1.2em;
 }
 
-/* Menu hidden by default (Sidebar style setup) */
 .main-menu {
   list-style: none;
   margin: 0;
@@ -71,8 +75,6 @@ nav {
   flex-direction: column;
 }
 
-
-/* Show menu when checkbox checked (Slide onto screen) */
 #menu-toggle:checked + .menu-toggle + .main-menu {
   display: flex;
 }
@@ -97,7 +99,7 @@ nav {
   border-radius: 20px;
 }
 
-/* Submenus for mobile */
+/* Submenus (mobile) */
 .submenu {
   display: none;
   background-color: #4682b4;
@@ -114,7 +116,9 @@ li:hover > .submenu {
   padding: 10px 20px;
 }
 
-/* MAIN CONTENT - STACKED LAYOUT */
+/* ==========================
+   2-COLUMN LAYOUT
+========================== */
 .two-column {
   display: flex;
   flex-direction: column;
@@ -152,7 +156,9 @@ aside a:hover {
   color: maroon;
 }
 
-/* FOOTER */
+/* ==========================
+   FOOTER
+========================== */
 footer {
   text-align: center;
   font-size: 0.8em;
@@ -162,10 +168,97 @@ footer {
   margin-top: 20px;
 }
 
-/* ========================
+/* ==========================
+   FORM STYLING
+========================== */
+form fieldset {
+  border: 2px solid steelblue;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #fbfbfb;
+}
+
+form legend {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: steelblue;
+}
+
+from label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+text area {
+  height: 70px;
+  resize: vertical;
+}
+
+/* Group styling for radio buttons and checkboxes */
+fieldset p {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Disable "Other" textarea until box is checked */
+#otherText[disabled] {
+  background: #ddd;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+.button-row {
+  display: flex;
+  gap: 20px;
+}
+
+base.btn {
+  border: none;
+  padding: 12px 28px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 6px;
+  color: white;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.submit-btn {
+  background-color: steelblue;
+}
+
+.reset-btn {
+  background-color: maroon;
+}
+
+.base-btn:hover {
+  background-color: darkgray;
+  color: black;
+}
+
+/* ==========================
    MEDIA QUERIES
-======================== */
-/* 1 Medium screens two-column layout */
+========================== */
 @media (max-width: 768px) {
   .two-column {
     flex-direction: row;
@@ -181,18 +274,12 @@ footer {
   }
 }
 
-/* 2 Large screens: horizontal menu (original code maintained) */
 @media (min-width: 900px) {
-  /* Hide hamburger on large screens */
-  .menu-toggle {
-    display: none;
-  }
-
+  .menu-toggle,
   #menu-toggle {
     display: none;
   }
-
-  /* Make the main menu horizontal */
+  
   .main-menu {
     display: flex;
     flex-direction: row;
@@ -204,7 +291,6 @@ footer {
     border: none;
   }
 
-  /* Submenus for large screens (dropdown) */
   .submenu {
     display: none;
     position: absolute;
@@ -219,13 +305,10 @@ footer {
     padding: 10px 15px;
   }
 
-  /* Dropdown appears on hover */
   .main-menu li:hover > .submenu {
     display: block;
   }
 
-  /* CUSTOM SYLES FOR STRESS PAGE */
-  /* Maroon headings for "What is Stress?" and "Managing Stress" */
   h2.stress-title {
     color: maroon;
   }
