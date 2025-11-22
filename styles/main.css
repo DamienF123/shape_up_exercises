@@ -9,13 +9,9 @@ body {
   padding: 20px;
   background: white;
   border: 2px solid steelblue;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
-
-/* ==========================
-   HEADER
-========================== */
 header {
   background: linear-gradient(white, lightsteelblue);
   padding: 20px;
@@ -44,9 +40,7 @@ header h2 {
   margin: 0;
 }
 
-/* ==========================
-   MOBILE NAVIGATION
-========================== */
+/* Navigation (mobile + deaktop) */
 nav {
   background-color: steelblue;
   border-bottom: 4px solid #1e4d7a;
@@ -99,7 +93,7 @@ nav {
   border-radius: 20px;
 }
 
-/* Submenus (mobile) */
+/* Submenu for mobile */
 .submenu {
   display: none;
   background-color: #4682b4;
@@ -116,9 +110,7 @@ li:hover > .submenu {
   padding: 10px 20px;
 }
 
-/* ==========================
-   2-COLUMN LAYOUT
-========================== */
+/* Two-column layout for main/ aside */
 .two-column {
   display: flex;
   flex-direction: column;
@@ -156,9 +148,7 @@ aside a:hover {
   color: maroon;
 }
 
-/* ==========================
-   FOOTER
-========================== */
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.8em;
@@ -169,25 +159,32 @@ footer {
 }
 
 /* ==========================
-   FORM STYLING
+   FORM / MEAL PLAN STYLING
 ========================== */
+form {
+  margin-top: 20px;
+}
+
 form fieldset {
   border: 2px solid steelblue;
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 8px;
-  background: #fbfbfb;
+  background: #ffffff;
 }
 
 form legend {
   font-weight: bold;
-  font-size: 1.15em;
+  font-size: 1.2em;
   color: steelblue;
+  padding: 0.5px;
 }
 
-from label {
+form label {
   display: block;
   margin-bottom: 12px;
+  font-size: 1em;
+  color: #333;
 }
 
 form input[type="text"],
@@ -200,14 +197,15 @@ textarea {
   border-radius: 4px;
   font-size: 1em;
   box-sizing: border-box;
+  margin-top: 4px;
 }
 
-text area {
-  height: 70px;
+form text area {
+  height: 80px;
   resize: vertical;
 }
 
-/* Group styling for radio buttons and checkboxes */
+/* Radio + check layout */
 fieldset p {
   margin-bottom: 8px;
   font-weight: bold;
@@ -217,29 +215,29 @@ fieldset p {
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 8px;
+  vertical-align: middle;
 }
 
-/* Disable "Other" textarea until box is checked */
-#otherText[disabled] {
-  background: #ddd;
+/* Other textarea when checkbox is checked */
+textarea#otherText {
+  margin-top: 8px;
 }
 
-/* ==========================
-   BUTTONS
-========================== */
+/* Buttons */
 .button-row {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 base.btn {
   border: none;
-  padding: 12px 28px;
+  padding: 12px 25px;
   cursor: pointer;
   font-size: 1em;
   border-radius: 6px;
   color: white;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: bold;
 }
 
@@ -257,24 +255,15 @@ base.btn {
 }
 
 /* ==========================
-   MEDIA QUERIES
+   RESPONSIVE (MEDIA)
 ========================== */
 @media (max-width: 768px) {
   .two-column {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  section {
-    flex: 2;
-  }
-
-  aside {
-    flex: 1;
+    flex-direction:column;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 90px) {
   .menu-toggle,
   #menu-toggle {
     display: none;
@@ -292,11 +281,9 @@ base.btn {
   }
 
   .submenu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: steelblue;
     min-width: 180px;
     z-index: 1000;
   }
@@ -305,11 +292,7 @@ base.btn {
     padding: 10px 15px;
   }
 
-  .main-menu li:hover > .submenu {
+  .main-menu li :hover > .submenu {
     display: block;
-  }
-
-  h2.stress-title {
-    color: maroon;
   }
 }
