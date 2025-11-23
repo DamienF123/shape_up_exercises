@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shape Up! | Meal Plan</title>
 	<link rel="icon" type="images/png" href="flavicon.ico">
-	<link rel="stylesheet" href="styles/main.css"
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
@@ -64,14 +64,14 @@
 					<legend>Lifestyle and goals</legend>
 
 					<p>Which currently matches your personal lefestyle?</p>
-					<label><input type="radio" name="lifestyle" checked> Active</label>
-					<label><input type="radio" name="lifestyle" Moderate</label>
-					<label><input type="radio" name="lifestyle" Sedentary</label>
+					<label><input type="radio" name="lifestyle" value="Active" checked> Active</label>
+					<label><input type="radio" name="lifestyle" value="Moderate"> Moderate</label>
+					<label><input type="radio" name="lifestyle" value="Sedentary"> Sedentary</label>
 
-					<p>What are your weight goals></p>
-					<label><input type="radio" name="goal" checked> Active</label>
-					<label><input type="radio" name="goal"> Lose</label>
-					<label><input type="radio" name="goal"> Maintain</label>
+					<p>What are your weight goals?></p>
+					<label><input type="radio" name="goal" value="Gain" checked> Active</label>
+					<label><input type="radio" name="goal" value="Lose"> Lose</label>
+					<label><input type="radio" name="goal" value="Maintain"> Maintain</label>
 				  </fieldset>
 
 				  <!-- ======= FOOD RESTRICTIONS ======= -->
@@ -79,7 +79,8 @@
 						<legend>Food preferences and restrictions</legend>
 
 						<label>
-							<input type="checkbox" id="otherBox" name="restrict" value="Other">Other, please explain:
+							<input type="checkbox" id="otherBox" name="restrict" value="Other">
+							Other, please explain:
 						</label>
 
 						<textarea id="otherText" placeholder="Enter additional restrictions..." disabled></textarea>
