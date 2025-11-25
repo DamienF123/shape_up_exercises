@@ -4,12 +4,101 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shape Up! | Meditation</title>
+	<link rel="stylesheet" href="../styles/meditation.css">
+
 </head>
 
 <body>
-	<main>
-	    <h1>Meditation</h1>
-		<h2>Under Construction</h2>
+	
+	<header>
+		<img src="../images/shape_up_logo.png" alt="Shape Up Logo">
+		<div>
+			<h1>SHAPE UP!</h1>
+			<h2>Find the best fit for you</h2>
+		</div>
+	</header>
+
+	<nav>
+		<input type="checkbox" id="menu-toggle">
+		<label for="menu-toggle" class="menu-toggle">Menu</label>
+
+		<ul class="main-menu">
+			<li><a href="../index.html">Home</a></li>
+			<li>
+				<a href="../strength/strength.html">Strength Training</a>
+			</li>
+			<li>
+				<a href="../cardio/cardio.html">Cardio Exercises</a>
+			</li>
+			<li>
+				<a class="current" href="meditate.html">Stress Relief</a>
+				<ul class="submenu">
+					<li><a href="breathing.html">Breathing</a></li>
+				</ul>
+			</li>
+			<li><a href="../diet/diet.html">Healthy Diets</a></li>
+		</ul>
+	</nav>
+
+	<main class="two-column">
+
+		<!-- LEFT COLUMN (MAIN CONTENT) -->
+		 <section>
+			<h1>What is Meditation</h1>
+
+			<p>
+				Meditation is one path toward transforming the mind. Buddhist meditation
+				practices encourage and develop concentration, clarify, and emotional
+				positivity. When you begin a meditation practice, you may learn the patterns
+				and habits of your mind. Meditation offers you a way to culitivate new and more
+				positive ways to approach the things you do throughout your day. Meditation
+				can have a transformative effect and can lead to positive changes as well as a
+				new understanding of life.
+			</p>
+
+			<h2>Video of a woman meditating</h2>
+
+			<video controls width="100%">
+				<source src="../media/meditation.mp4" type="video/mp4">
+			</video>
+
+			<h2>Chose your meditation music</h2>
+
+			<audio controls>
+				<source src="../media/ambient_grand_piano.mp3" type="audio/mp3">
+			</audio>
+
+			<audio controls>
+				<source src="../media/body_and_soul.mp3" type="audio/mp3">
+			</audio>
+
+			<audio controls>
+				<source src="../media/time_inevitability.mp3" type="audio/mp3">
+			</audio>
+
+			<audio controls>
+				<source src="../media/waves_and_tears.mp3" type="audio/mp3">
+			</audio>
+
+		 </section>
+
+		 <!-- RIGHT COLUMN (ASIDE SECTION) -->
+		  <aside>
+			<h3>Additional resources</h3>
+			<ul>
+				<li><a href="https://www.cdc.gov/physical-activity-basics/benefits/index.html">Physical activity and health</a></li>
+				<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/flexibility-exercise-stretching">Stretching exercises</a></li>
+				<li><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/strength-and-resistance-training-exercise">Strength training</a></li>
+				<li><a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart">Cardiovascular training</a></li>
+				<li><a href="https://www.self.com/gallery/power-yoga-workout">Yoga workout</a></li>
+			</ul>
+		  </aside>
+
 	</main>
+
+	<footer>
+		© Shape Up!
+	</footer>
+	
 </body>
 </html>
