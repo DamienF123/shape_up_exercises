@@ -124,6 +124,27 @@ li:hover > .submenu {
   gap: 20px;
 }
 
+section {
+  order: 1;
+}
+
+/* ==========================
+   MAIN TEXT (section)
+========================== */
+
+section p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+section h1, section h2 {
+  margin-bottom: 15px;
+}
+
+/* ==========================
+   ADDITIONAL RESOURCES (RIGHT COLUMN)
+========================== */
+
 aside {
   border: 2px solid steelblue;
   border-radius: 10px;
