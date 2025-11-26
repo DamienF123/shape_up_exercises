@@ -125,13 +125,7 @@ li:hover > .submenu {
   gap: 20px;
 }
 
-/* default mobile layout */
-section {
-  order: 2;
-}
-
 aside {
-  order: 3;
   border: 2px solid steelblue;
   border-radius: 10px;
   padding: 15px;
@@ -155,6 +149,21 @@ aside a {
 
 aside a:hover {
   color: maroon;
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 900px) {
+  .two-column {
+    flex-direction: row-reverse; /* aside goes to the right */
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  section {
+    width: 70%;
+  }
 }
 
 /* ==========================
@@ -190,59 +199,4 @@ footer {
   color: white;
   padding: 10px;
   margin-top: 20px;
-}
-
-/* ==========================
-   RESPONSIVE (SIDE-BY-SIDE)
-========================== */
-
-@media (max-width: 768) {
-    .two-column {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    section {
-      order: 1;
-      width: 70%;
-    }
-
-    aside {
-      order: 2;
-      width: 30%;
-    }
-}
-
-@media (min-width: 900px) {
-    .menu-toggle,
-    #menu-toggle {
-        display: none;
-    }
-
-    .main-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .main-menu li {
-        position: absolute;
-        border: none;
-    }
-
-    .submenu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        min-width: 180px;
-        z-index: 1000;
-    }
-
-    .submenu li a {
-        padding: 10px 15px;
-    }
-
-    .main-menu li:hover > .submenu {
-        display: block;
-    }
 }
