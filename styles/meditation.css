@@ -145,6 +145,35 @@ aside ul {
   padding-left: 0;
 }
 
+aside ul li {
+  padding-left: 26px;
+  margin-bottom: 8px;
+  background-repeat: no-repeat;
+  background-position: left 4px center;
+  background-size: 16px 16px;
+}
+
+/* Different icons for each item */
+aside ul li:nth-child(1) {
+  background-image: url(../images/run-icon.png);
+}
+
+aside ul li:nth-child(2) {
+  background-image: url(../images/stretch-icon.png);
+}
+
+aside ul li:nth-child(3) {
+  background-image: url(../images/strength-icon.png);
+}
+
+aside ul li:nth-child(4) {
+  background-image: url(../images/cardio-icon.png);
+}
+
+aside ul li:nth-child(5) {
+  background-image: url(../images/yoga-icon.png);
+}
+
 aside a {
   color: steelblue;
   text-decoration: underline;
