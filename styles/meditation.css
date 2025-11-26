@@ -52,7 +52,6 @@ header h2 {
 nav {
   background-color: steelblue;
   border-bottom: 4px solid #1e4d7a;
-  position: relative;
 }
 
 #menu-toggle {
@@ -130,8 +129,6 @@ aside {
   border-radius: 10px;
   padding: 15px;
   background-color: #f9f9f9;
-  max-width: 260px; /* keeps the box narrower */
-  margin-left: auto; /* pushes it to the right */
 }
 
 aside h3 {
@@ -151,21 +148,6 @@ aside a {
 
 aside a:hover {
   color: maroon;
-}
-
-/* DESKTOP LAYOUT */
-@media (min-width: 900px) {
-  .two-column {
-    flex-direction: row-reverse; /* aside goes to the right */
-  }
-
-  aside {
-    width: 30%;
-  }
-
-  section {
-    width: 70%;
-  }
 }
 
 /* ==========================
@@ -201,4 +183,28 @@ footer {
   color: white;
   padding: 10px;
   margin-top: 20px;
+}
+
+/* ==========================
+   DESKTOP RESPONSIVE (900px+)
+========================== */
+
+@media (min-width: 900px) {
+
+  /* Put aside on right side */
+  .two-column {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  /* FINAL FIX: shorten the Additional resources box */
+  aside {
+    max-width: 250px;
+    width: 250px;
+    flex-shrink: 0;
+  }
+
+  section {
+    width: 70%;
+  }
 }
