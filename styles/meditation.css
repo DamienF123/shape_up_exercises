@@ -101,13 +101,10 @@ nav {
   border-radius: 20px;
 }
 
-/* Submenu (desktop hover) */
+/* Submenu */
 .submenu {
   display: none;
   background-color: #4682b4;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 li:hover > .submenu {
@@ -129,7 +126,7 @@ li:hover > .submenu {
 }
 
 section {
-  order: 1;
+  order: 3;
 }
 
 aside {
@@ -200,7 +197,7 @@ footer {
 
 @media (max-width: 768) {
     .two-column {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
