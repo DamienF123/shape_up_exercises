@@ -137,9 +137,16 @@ section p {
   margin-bottom: 20px;
 }
 
-section h1, section h2 {
+section h1 {
   margin-bottom: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+section h2 {
   color: maroon;
+  margin-top: 25px;
+  margin-bottom: 15px;
   font-weight: bold;
 }
 
