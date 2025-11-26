@@ -140,7 +140,7 @@ aside h3 {
 }
 
 aside ul {
-  list-style: inside;
+  list-style: none;
   line-height: 1.6;
   padding-left: 0;
 }
