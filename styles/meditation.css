@@ -127,10 +127,12 @@ li:hover > .submenu {
 aside {
   border: 2px solid steelblue;
   border-radius: 10px;
-  padding: 15px;
-  background-color: #f9f9f9;
-  margin-top: 25px;
+  padding-top: 5px;
   padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #f9f9f9;
+  margin-top: 15px;
 }
 
 aside h3 {
