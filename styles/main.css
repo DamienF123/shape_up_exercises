@@ -9,8 +9,6 @@ body {
 
 .container {
   font-family: Arial, Helvetica, sans-serif;
-
-  /* PAGE BORDER + CENTERING */
   width: 90%;
   max-width: 1200%;
   margin: 20px auto;
@@ -18,7 +16,6 @@ body {
   border: 2px solid steelblue;
   box-shadow: 5px 5px 10px; rgba(0,0,0,0.5);
 
-  /* GRID LAYOUT */
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr;
@@ -28,16 +25,16 @@ body {
     "main"
     "aside"
     "footer";
+
+  /* Prevent header/nav/main/etc from overflowing the container */
+  .container,
+  .container * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
 }
 
 /* GRID AREA ASSIGNMENTS */
-header { grid-area: header; }
-nav { grid-area: nav; }
-.two-column { grid-area: main; }
-aside { grid-area: aside; }
-footer { grid-area: footer; }
-
-/* Grid area assignments */
 header { grid-area: header; }
 nav { grid-area: nav; }
 .two-column { grid-area: main; }
