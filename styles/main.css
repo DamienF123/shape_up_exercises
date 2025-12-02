@@ -279,9 +279,17 @@ base.btn {
 ========================== */
 /* --- Larger screens: Two-column layout --- */
 @media (max-width: 768px) {
- .two-column {
-   grid-template-columns: 2fr 1fr; /* main left, aside right */
- }
+  .two-column {
+    grid-template-columns: 2fr 1fr; /* section | aside */
+  }
+
+  section {
+    grid-column: 1; /* left column */
+  }
+
+  aside {
+    grid-column: 2; /* right column */
+  }
 }
 
 /* --- Desktop navigation menu (horizontal grid) --- */
