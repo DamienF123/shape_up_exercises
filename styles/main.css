@@ -158,6 +158,15 @@ aside a:hover {
 }
 
 /* ==========================
+  Section heading inside main content
+========================== */
+section h3 {
+  color: maroon;
+  margin-top: 20px;
+  font-size: 1.3em;
+}
+
+/* ==========================
   TWO-COLUMN GRID LAYOUT
 ========================== */
 footer {
