@@ -142,9 +142,10 @@ footer {
   body {
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    border-left: none;
-    border-right: none;
+    margin: 20px auto;
+    border: 2px solid steelblue;
+    border-radius: 0;
+    padding: 20px;
 
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
