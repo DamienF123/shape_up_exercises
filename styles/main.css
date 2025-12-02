@@ -138,15 +138,20 @@ footer {
 }
 
 /* DEASKTOP: Sidebar moves to TOP RIGHT */
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
   body {
-    width: 100%;
-    max-width: 100%;
-    margin: 20px auto;
+    /* CENTER THE PAGE */
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto; /* centers the page */
+    
+    /* ADD BOARDER AROUND THE PAGE */
     border: 2px solid steelblue;
     border-radius: 0;
     padding: 20px;
 
+    /* DESKTOP GRID LAYOUT */
+    display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "header aside"
@@ -156,6 +161,7 @@ footer {
   }
 
   .two-column {
+    /* main only - aside is placed by body grid */
     grid-template-columns: 1fr; /* body grid places aside */
     grid-template-areas:
       "main";
