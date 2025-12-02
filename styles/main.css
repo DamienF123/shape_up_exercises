@@ -1,63 +1,43 @@
 /* ==========================
-   BASE CONTAINER & GRID
+   PAFE BASE
 ========================== */
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
   width: 95%;
-  max-width: 1200%;
-  margin: 0px auto;
+  max-width: 1100%;
+  margin: 0 auto;
   border: 2px solid steelblue;
-  padding: 0;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-
-  display: grid;
-  gap: 20px;
-  grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
 }
-
-/* Align header/nav/footer with container borders */
-header, nav, footer {
-  width: 100%;
-  margin: 0;
-}
-
-/* GRID AREAS */
-header { grid-area: header; }
-nav { grid-area: nav; }
-.two-column { grid-area: main; }
-footer { grid-area: footer; }
 
 /* ==========================
    HEADER
 ========================== */
 header {
-  background: linear-gradient(white, lightsteelblue);
-  padding: 20px;
   display: flex;
   align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(white, lightsteelblue);
   border-bottom: 4px solid steelblue;
 }
 
-header img {
-  width: 120px;
-  margin-right: 20px;
+.logo {
+  width: 90px;
+  margin-right: 15px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.2em;
-  font-style: italic;
   color: steelblue;
+  font-style: italic;
+  font-size: 2rem;
 }
 
 .tagline {
@@ -70,13 +50,13 @@ header h1 {
 nav {
   background-color: steelblue;
   border-bottom: 4px solid #1e4d7a;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 nav a {
-  padding: 15px 25px;
   color: white;
+  padding: 15px 25px;
+  display: inline-block;
   text-decoration: none;
   font-weight: bold;
 }
@@ -86,25 +66,53 @@ nav a:hover {
 }
 
 /* ==========================
-   MAIN + SIDEBAR
+   MAIN CONTENT LAYOUT
 ========================== */
-.two-column {
+.content {
   display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  padding: 20px;
 }
 
-/* SIDEBAR */
+main h2 {
+  font-size: 1.6rem;
+}
+
+main h3 {
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+h4.red {
+  color: #b30000;
+  font-weight: bold;
+}
+
+main p {
+  line-height: 1.4;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
 aside {
-  padding: 15px;
   border: 2px solid steelblue;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+  padding: 15px 18px;
+  border-radius: 12px;
 }
 
 aside h3 {
-  color: maroon;
   margin-top: 0;
+  color: maroon;
+}
+
+aside ul {
+  padding-left: 20px;
 }
 
 aside a {
@@ -116,34 +124,14 @@ aside a:hover {
   color: maroon;
 }
 
-/* FOOTER */
+/* ==========================
+   FOOTER
+========================== */
 footer {
   text-align: center;
-  padding: 10px;
   background-color: steelblue;
   color: white;
-  font-size: 0.8em;
-}
-
-/* ==========================
-   MEDIA QUERIES
-========================== */
-
-/* Tablet: sidebar moves right */
-@media (min-width: 700px) {
-  .two-column {
-    grid-template-columns: 2fr 1fr;
-  }
-}
-
-/* Desktop layout */
-@media (min-width: 900px) {
-  .container {
-    grid-template-areas:
-      "header aside"
-      "nav nav"
-      "main aside"
-      "footer footer";
-    grid-template-columns: 2fr 1fr;
-  }
+  padding: 10px;
+  font-size: 0.85rem;
+  border-top: 4px solid #1e4d7a;
 }
