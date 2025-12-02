@@ -12,11 +12,14 @@ body {
  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
+/* HEADER - GRID LAYOUT */
 header {
  background: linear-gradient(white, lightsteelblue);
  padding: 20px;
- display: flex;
+ display: grid;
+ grid-template-columns: auto 1fr;
  align-items: center;
+ gap: 20px;
  border-bottom: 4px solid steelblue;
 }
 
@@ -25,7 +28,6 @@ header img {
  max-width: 120px;
  min-width: 100px;
  height: auto;
- margin-right: 20px;
 }
 
 header h1 {
@@ -40,13 +42,16 @@ header h2 {
  margin: 0;
 }
 
-/* Navigation (mobile + deaktop) */
+/* ==========================
+  NAVIGATION
+========================== */
 nav {
  background-color: steelblue;
  border-bottom: 4px solid #1e4d7a;
  position: relative;
 }
 
+/* Mobile menu toggle */
 #menu-toggle {
  display: none;
 }
@@ -61,16 +66,18 @@ nav {
  font-size: 1.2em;
 }
 
+/* Main menu (mobile grid) */
 .main-menu {
  list-style: none;
  margin: 0;
  padding: 0;
- display: none;
- flex-direction: column;
+ display: grid;
+ grid-template-columns: 1fr;
 }
 
+/* Show menu when checkbox checked */
 #menu-toggle:checked + .menu-toggle + .main-menu {
- display: flex;
+ display: grid;
 }
 
 .main-menu li {
@@ -93,7 +100,7 @@ nav {
  border-radius: 20px;
 }
 
-/* Submenu for mobile */
+/* SUBMRNU (mobile) */
 .submenu {
  display: none;
  background-color: #4682b4;
@@ -110,10 +117,12 @@ li:hover > .submenu {
  padding: 10px 20px;
 }
 
-/* Two-column layout for main/ aside */
+/* ==========================
+  TWO-COLUMN GRID LAYOUT
+========================== */
 .two-column {
- display: flex;
- flex-direction: column;
+ display: grid;
+ grid-template-columns: 1fr; /* Mobile: 1 column */
  gap: 20px;
 }
 
@@ -148,7 +157,9 @@ aside a:hover {
  color: maroon;
 }
 
-/* Footer */
+/* ==========================
+  TWO-COLUMN GRID LAYOUT
+========================== */
 footer {
  text-align: center;
  font-size: 0.8em;
@@ -257,26 +268,30 @@ base.btn {
 /* ==========================
   RESPONSIVE (MEDIA)
 ========================== */
+/* --- Larger screens: Two-column layout --- */
 @media (max-width: 768px) {
  .two-column {
-   flex-direction:column;
+   grid-template-columns: 2fr 1fr; /* main left, aside right */
  }
 }
 
-@media (min-width: 90px) {
+/* --- Desktop navigation menu (horizontal grid) --- */
+@media (min-width: 900px) {
  .menu-toggle,
  #menu-toggle {
    display: none;
  }
   .main-menu {
-   display: flex;
-   flex-direction: row;
+   display: grid;
+   grid-auto-flow: column;
    justify-content: center;
+   align-items: center;
+   column-gap: 25px;
  }
 
  .main-menu li {
+    border: none;
    position: relative;
-   border: none;
  }
 
  .submenu {
@@ -285,6 +300,7 @@ base.btn {
    left: 0;
    min-width: 180px;
    z-index: 1000;
+   display: none;
  }
 
  .submenu li a {
