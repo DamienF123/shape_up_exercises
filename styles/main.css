@@ -1,137 +1,297 @@
 /* ==========================
-   PAFE BASE
+  BASE LAYOUT
 ========================== */
 body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+ font-family: Arial, Helvetica, sans-serif;
+ max-width: 1000px;
+ width: 90%;
+ margin: 20px auto;
+ padding: 20px;
+ background: white;
+ border: 2px solid steelblue;
+ box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
-.container {
-  width: 95%;
-  max-width: 1100%;
-  margin: 0 auto;
-  border: 2px solid steelblue;
-  background: white;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
-}
-
-/* ==========================
-   HEADER
-========================== */
 header {
-  display: flex;
-  align-items: center;
-  padding: 15px 20px;
-  background: linear-gradient(white, lightsteelblue);
-  border-bottom: 4px solid steelblue;
+ background: linear-gradient(white, lightsteelblue);
+ padding: 20px;
+ display: flex;
+ align-items: center;
+ border-bottom: 4px solid steelblue;
 }
 
-.logo {
-  width: 90px;
-  margin-right: 15px;
+header img {
+ width: 100%;
+ max-width: 120px;
+ min-width: 100px;
+ height: auto;
+ margin-right: 20px;
 }
 
 header h1 {
-  margin: 0;
-  color: steelblue;
-  font-style: italic;
-  font-size: 2rem;
+ font-size: 2em;
+ color: steelblue;
+ font-style: italic;
+ margin: 0;
 }
 
-.tagline {
-  margin: 0;
+header h2 {
+ font-size: 1.2em;
+ margin: 0;
 }
 
-/* ==========================
-   NAVIGATION
-========================== */
+/* Navigation (mobile + deaktop) */
 nav {
-  background-color: steelblue;
-  border-bottom: 4px solid #1e4d7a;
-  text-align: center;
+ background-color: steelblue;
+ border-bottom: 4px solid #1e4d7a;
+ position: relative;
 }
 
-nav a {
-  color: white;
-  padding: 15px 25px;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
+#menu-toggle {
+ display: none;
 }
 
-nav a:hover {
-  background: #1e4d7a;
+.menu-toggle {
+ display: block;
+ background: #1e4d7a;
+ color: white;
+ text-align: center;
+ padding: 10px;
+ cursor: pointer;
+ font-size: 1.2em;
 }
 
-/* ==========================
-   MAIN CONTENT LAYOUT
-========================== */
-.content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 25px;
-  padding: 20px;
+.main-menu {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ display: none;
+ flex-direction: column;
 }
 
-main h2 {
-  font-size: 1.6rem;
+#menu-toggle:checked + .menu-toggle + .main-menu {
+ display: flex;
 }
 
-main h3 {
-  font-size: 1.3rem;
-  margin-top: 30px;
+.main-menu li {
+ border-bottom: 1px solid #1e4d7a;
 }
 
-h4 {
-  margin-bottom: 5px;
+.main-menu a {
+ display: block;
+ padding: 15px 20px;
+ color: white;
+ text-decoration: none;
 }
 
-h4.red {
-  color: #b30000;
-  font-weight: bold;
+.main-menu a:hover {
+ background-color: #1e4d7a;
 }
 
-main p {
-  line-height: 1.4;
+.main-menu a.current {
+ border: 2px solid white;
+ border-radius: 20px;
 }
 
-/* ==========================
-   SIDEBAR
-========================== */
+/* Submenu for mobile */
+.submenu {
+ display: none;
+ background-color: #4682b4;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+li:hover > .submenu {
+ display: block;
+}
+
+.submenu li a {
+ padding: 10px 20px;
+}
+
+/* Two-column layout for main/ aside */
+.two-column {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+section {
+ order: 1;
+}
+
 aside {
-  border: 2px solid steelblue;
-  padding: 15px 18px;
-  border-radius: 12px;
+ order: 2;
+ border: 2px solid steelblue;
+ border-radius: 10px;
+ padding: 15px;
+ background-color: #f9f9f9;
 }
 
 aside h3 {
-  margin-top: 0;
-  color: maroon;
+ color: maroon;
 }
 
 aside ul {
-  padding-left: 20px;
+ list-style: inside;
+ line-height: 1.6;
+ padding-left: 0;
 }
 
 aside a {
-  color: steelblue;
-  text-decoration: underline;
+ color: steelblue;
+ text-decoration: underline;
 }
 
 aside a:hover {
-  color: maroon;
+ color: maroon;
+}
+
+/* Footer */
+footer {
+ text-align: center;
+ font-size: 0.8em;
+ background-color: steelblue;
+ color: white;
+ padding: 10px;
+ margin-top: 20px;
 }
 
 /* ==========================
-   FOOTER
+  FORM / MEAL PLAN STYLING
 ========================== */
-footer {
-  text-align: center;
-  background-color: steelblue;
-  color: white;
-  padding: 10px;
-  font-size: 0.85rem;
-  border-top: 4px solid #1e4d7a;
+form {
+ margin-top: 20px;
+}
+
+form fieldset {
+ border: 2px solid steelblue;
+ padding: 15px;
+ margin-bottom: 20px;
+ border-radius: 8px;
+ background: #ffffff;
+}
+
+form legend {
+ font-weight: bold;
+ font-size: 1.2em;
+ color: steelblue;
+ padding: 0.5px;
+}
+
+form label {
+ display: block;
+ margin-bottom: 12px;
+ font-size: 1em;
+ color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+textarea {
+ width: 100%;
+ padding: 8px;
+ border: 1px solid #888;
+ border-radius: 4px;
+ font-size: 1em;
+ box-sizing: border-box;
+ margin-top: 4px;
+}
+
+form text area {
+ height: 80px;
+ resize: vertical;
+}
+
+/* Radio + check layout */
+fieldset p {
+ margin-bottom: 8px;
+ font-weight: bold;
+ color: #444;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+ margin-right: 8px;
+ vertical-align: middle;
+}
+
+/* Other textarea when checkbox is checked */
+textarea#otherText {
+ margin-top: 8px;
+}
+
+/* Buttons */
+.button-row {
+ display: flex;
+ gap: 15px;
+ margin-top: 10px;
+}
+
+base.btn {
+ border: none;
+ padding: 12px 25px;
+ cursor: pointer;
+ font-size: 1em;
+ border-radius: 6px;
+ color: white;
+ transition: background-color 0.3s ease, color 0.3s ease;
+ font-weight: bold;
+}
+
+.submit-btn {
+ background-color: steelblue;
+}
+
+.reset-btn {
+ background-color: maroon;
+}
+
+.base-btn:hover {
+ background-color: darkgray;
+ color: black;
+}
+
+/* ==========================
+  RESPONSIVE (MEDIA)
+========================== */
+@media (max-width: 768px) {
+ .two-column {
+   flex-direction:column;
+ }
+}
+
+@media (min-width: 90px) {
+ .menu-toggle,
+ #menu-toggle {
+   display: none;
+ }
+  .main-menu {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+
+ .main-menu li {
+   position: relative;
+   border: none;
+ }
+
+ .submenu {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   min-width: 180px;
+   z-index: 1000;
+ }
+
+ .submenu li a {
+   padding: 10px 15px;
+ }
+
+ .main-menu li :hover > .submenu {
+   display: block;
+ }
 }
