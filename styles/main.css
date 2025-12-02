@@ -131,6 +131,12 @@ footer {
     "nav nav"
     "main main"
     "footer footer";
+
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
   }
 }
 
