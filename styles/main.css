@@ -12,7 +12,9 @@ body {
  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
-/* HEADER - GRID LAYOUT */
+/* ==========================
+  HEADER (GRID)
+========================== */
 header {
  background: linear-gradient(white, lightsteelblue);
  padding: 20px;
@@ -43,7 +45,7 @@ header h2 {
 }
 
 /* ==========================
-  NAVIGATION
+  NAVIGATION (GRID)
 ========================== */
 nav {
  background-color: steelblue;
@@ -66,7 +68,7 @@ nav {
  font-size: 1.2em;
 }
 
-/* Main menu (mobile grid) */
+/* MOBILE navigation grid */
 .main-menu {
  list-style: none;
  margin: 0;
@@ -75,7 +77,6 @@ nav {
  grid-template-columns: 1fr;
 }
 
-/* Show menu when checkbox checked */
 #menu-toggle:checked + .menu-toggle + .main-menu {
  display: grid;
 }
@@ -100,7 +101,7 @@ nav {
  border-radius: 20px;
 }
 
-/* SUBMRNU (mobile) */
+/* Submenu */
 .submenu {
  display: none;
  background-color: #4682b4;
@@ -118,20 +119,25 @@ li:hover > .submenu {
 }
 
 /* ==========================
-  TWO-COLUMN GRID LAYOUT
+  MAIN CONTENT LAYOUT (GRID AREAS)
 ========================== */
+
+/* MOBILE layout (stacked) */
 .two-column {
  display: grid;
- grid-template-columns: 1fr; /* Mobile: 1 column */
+ grid-template-columns: 1fr;
+ grid-template-areas:
+  "main"
+  "aside";
  gap: 20px;
 }
 
 section {
- order: 1;
+ grid-area: main;
 }
 
 aside {
- order: 2;
+ grid-area: aside;
  border: 2px solid steelblue;
  border-radius: 10px;
  padding: 15px;
@@ -157,9 +163,7 @@ aside a:hover {
  color: maroon;
 }
 
-/* ==========================
-  Section heading inside main content
-========================== */
+/* Section headings */
 section h3 {
   color: maroon;
   margin-top: 20px;
@@ -167,7 +171,7 @@ section h3 {
 }
 
 /* ==========================
-  TWO-COLUMN GRID LAYOUT
+  FOOTER
 ========================== */
 footer {
  text-align: center;
@@ -197,7 +201,6 @@ form legend {
  font-weight: bold;
  font-size: 1.2em;
  color: steelblue;
- padding: 0.5px;
 }
 
 form label {
@@ -238,14 +241,14 @@ input[type="checkbox"] {
  vertical-align: middle;
 }
 
-/* Other textarea when checkbox is checked */
 textarea#otherText {
  margin-top: 8px;
 }
 
-/* Buttons */
+/* Button row → grid */
 .button-row {
- display: flex;
+ display: grid;
+ grid-auto-flow: column;
  gap: 15px;
  margin-top: 10px;
 }
@@ -275,24 +278,18 @@ base.btn {
 }
 
 /* ==========================
-  RESPONSIVE (MEDIA)
+  RESPONSIVE
 ========================== */
-/* --- Larger screens: Two-column layout --- */
+
+/* --- DESKTOP LAYOUT - guarantees aside on right --- */
 @media (max-width: 768px) {
   .two-column {
     grid-template-columns: 2fr 1fr; /* section | aside */
-  }
-
-  section {
-    grid-column: 1; /* left column */
-  }
-
-  aside {
-    grid-column: 2; /* right column */
+    grid-template-areas: "main aside";
   }
 }
 
-/* --- Desktop navigation menu (horizontal grid) --- */
+/* --- DESKTOP NAVIGATION --- */
 @media (min-width: 900px) {
  .menu-toggle,
  #menu-toggle {
@@ -318,10 +315,6 @@ base.btn {
    min-width: 180px;
    z-index: 1000;
    display: none;
- }
-
- .submenu li a {
-   padding: 10px 15px;
  }
 
  .main-menu li :hover > .submenu {
