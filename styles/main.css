@@ -22,7 +22,7 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Grid area assignments */
@@ -138,7 +138,7 @@ footer {
 }
 
 /* DEASKTOP: Sidebar moves to TOP RIGHT */
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   body {
     /* CENTER THE PAGE */
     width: 90%;
