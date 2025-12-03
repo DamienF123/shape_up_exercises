@@ -170,6 +170,52 @@ section h3 {
   font-size: 1.3em;
 }
 
+
+/* ==========================
+  DESKTOP LAYOUT - aside on the RIGHT
+========================== */
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 2fr 1fr; /* main | aside */
+    grid-template-areas: "main aside";
+  }
+}
+
+/* ==========================
+  DESKTOP NAVIGATION
+========================== */
+@media (min-width: 900px) {
+ .menu-toggle,
+ #menu-toggle {
+   display: none;
+ }
+  .main-menu {
+   display: grid;
+   grid-auto-flow: column;
+   justify-content: center;
+   align-items: center;
+   column-gap: 25px;
+ }
+
+ .main-menu li {
+    border: none;
+   position: relative;
+ }
+
+ .submenu {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   min-width: 180px;
+   z-index: 1000;
+   display: none;
+ }
+
+ .main-menu li :hover > .submenu {
+   display: block;
+ }
+}
+
 /* ==========================
   FOOTER
 ========================== */
@@ -253,6 +299,7 @@ textarea#otherText {
  margin-top: 10px;
 }
 
+/* base.btn → .base-btn */
 base.btn {
  border: none;
  padding: 12px 25px;
@@ -275,49 +322,4 @@ base.btn {
 .base-btn:hover {
  background-color: darkgray;
  color: black;
-}
-
-/* ==========================
-  RESPONSIVE
-========================== */
-
-/* --- DESKTOP LAYOUT - guarantees aside on right --- */
-@media (max-width: 768px) {
-  .two-column {
-    grid-template-columns: 2fr 1fr; /* main on the left , aside on the right */
-    grid-template-areas: "main aside";
-  }
-}
-
-/* --- DESKTOP NAVIGATION --- */
-@media (min-width: 900px) {
- .menu-toggle,
- #menu-toggle {
-   display: none;
- }
-  .main-menu {
-   display: grid;
-   grid-auto-flow: column;
-   justify-content: center;
-   align-items: center;
-   column-gap: 25px;
- }
-
- .main-menu li {
-    border: none;
-   position: relative;
- }
-
- .submenu {
-   position: absolute;
-   top: 100%;
-   left: 0;
-   min-width: 180px;
-   z-index: 1000;
-   display: none;
- }
-
- .main-menu li :hover > .submenu {
-   display: block;
- }
 }
